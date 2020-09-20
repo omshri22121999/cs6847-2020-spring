@@ -1,0 +1,792 @@
+20/07/20 06:42:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/07/20 06:42:20 INFO SparkContext: Running Spark version 2.4.6
+20/07/20 06:42:20 INFO SparkContext: Submitted application: tweet-count-fp.py
+20/07/20 06:42:20 INFO SecurityManager: Changing view acls to: ubuntu
+20/07/20 06:42:20 INFO SecurityManager: Changing modify acls to: ubuntu
+20/07/20 06:42:20 INFO SecurityManager: Changing view acls groups to: 
+20/07/20 06:42:20 INFO SecurityManager: Changing modify acls groups to: 
+20/07/20 06:42:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ubuntu); groups with view permissions: Set(); users  with modify permissions: Set(ubuntu); groups with modify permissions: Set()
+20/07/20 06:42:20 INFO Utils: Successfully started service 'sparkDriver' on port 38101.
+20/07/20 06:42:20 INFO SparkEnv: Registering MapOutputTracker
+20/07/20 06:42:20 INFO SparkEnv: Registering BlockManagerMaster
+20/07/20 06:42:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/07/20 06:42:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/07/20 06:42:20 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-9eb96e21-496b-4af1-9f63-bb489f0eed91
+20/07/20 06:42:20 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/07/20 06:42:20 INFO SparkEnv: Registering OutputCommitCoordinator
+20/07/20 06:42:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/07/20 06:42:20 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ip-172-31-67-211.ec2.internal:4040
+20/07/20 06:42:21 INFO Executor: Starting executor ID driver on host localhost
+20/07/20 06:42:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36529.
+20/07/20 06:42:21 INFO NettyBlockTransferService: Server created on ip-172-31-67-211.ec2.internal:36529
+20/07/20 06:42:21 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/07/20 06:42:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-172-31-67-211.ec2.internal, 36529, None)
+20/07/20 06:42:21 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-67-211.ec2.internal:36529 with 366.3 MB RAM, BlockManagerId(driver, ip-172-31-67-211.ec2.internal, 36529, None)
+20/07/20 06:42:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-172-31-67-211.ec2.internal, 36529, None)
+20/07/20 06:42:21 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-172-31-67-211.ec2.internal, 36529, None)
+20/07/20 06:42:21 INFO ReceiverTracker: Starting 1 receivers
+20/07/20 06:42:21 INFO ReceiverTracker: ReceiverTracker started
+20/07/20 06:42:21 INFO KafkaInputDStream: Slide time = 600000 ms
+20/07/20 06:42:21 INFO KafkaInputDStream: Storage level = Serialized 1x Replicated
+20/07/20 06:42:21 INFO KafkaInputDStream: Checkpoint interval = null
+20/07/20 06:42:21 INFO KafkaInputDStream: Remember interval = 600000 ms
+20/07/20 06:42:21 INFO KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@407ae6b5
+20/07/20 06:42:21 INFO PythonTransformedDStream: Slide time = 600000 ms
+20/07/20 06:42:21 INFO PythonTransformedDStream: Storage level = Serialized 1x Replicated
+20/07/20 06:42:21 INFO PythonTransformedDStream: Checkpoint interval = null
+20/07/20 06:42:21 INFO PythonTransformedDStream: Remember interval = 600000 ms
+20/07/20 06:42:21 INFO PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@5aea6c30
+20/07/20 06:42:21 INFO ForEachDStream: Slide time = 600000 ms
+20/07/20 06:42:21 INFO ForEachDStream: Storage level = Serialized 1x Replicated
+20/07/20 06:42:21 INFO ForEachDStream: Checkpoint interval = null
+20/07/20 06:42:21 INFO ForEachDStream: Remember interval = 600000 ms
+20/07/20 06:42:21 INFO ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@4d029f28
+20/07/20 06:42:21 INFO RecurringTimer: Started timer for JobGenerator at time 1595227800000
+20/07/20 06:42:21 INFO JobGenerator: Started JobGenerator at 1595227800000 ms
+20/07/20 06:42:21 INFO JobScheduler: Started JobScheduler
+20/07/20 06:42:21 INFO StreamingContext: StreamingContext started
+20/07/20 06:42:21 INFO ReceiverTracker: Receiver 0 started
+20/07/20 06:42:21 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+20/07/20 06:42:21 INFO DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+20/07/20 06:42:21 INFO DAGScheduler: Parents of final stage: List()
+20/07/20 06:42:21 INFO DAGScheduler: Missing parents: List()
+20/07/20 06:42:21 INFO DAGScheduler: Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:614), which has no missing parents
+20/07/20 06:42:21 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 49.0 KB, free 366.3 MB)
+20/07/20 06:42:22 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 16.1 KB, free 366.2 MB)
+20/07/20 06:42:22 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 16.1 KB, free: 366.3 MB)
+20/07/20 06:42:22 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1163
+20/07/20 06:42:22 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:614) (first 15 tasks are for partitions Vector(0))
+20/07/20 06:42:22 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/07/20 06:42:22 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8742 bytes)
+20/07/20 06:42:22 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/07/20 06:42:22 INFO RecurringTimer: Started timer for BlockGenerator at time 1595227342200
+20/07/20 06:42:22 INFO BlockGenerator: Started BlockGenerator
+20/07/20 06:42:22 INFO BlockGenerator: Started block pushing thread
+20/07/20 06:42:22 INFO ReceiverTracker: Registered receiver for stream 0 from ip-172-31-67-211.ec2.internal:38101
+20/07/20 06:42:22 INFO ReceiverSupervisorImpl: Starting receiver 0
+20/07/20 06:42:22 INFO KafkaReceiver: Starting Kafka Consumer Stream with group: spark-streaming
+20/07/20 06:42:22 INFO KafkaReceiver: Connecting to Zookeeper: localhost:2181
+20/07/20 06:42:22 INFO VerifiableProperties: Verifying properties
+20/07/20 06:42:22 INFO VerifiableProperties: Property group.id is overridden to spark-streaming
+20/07/20 06:42:22 INFO VerifiableProperties: Property zookeeper.connect is overridden to localhost:2181
+20/07/20 06:42:22 INFO VerifiableProperties: Property zookeeper.connection.timeout.ms is overridden to 10000
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Connecting to zookeeper instance at localhost:2181
+20/07/20 06:42:22 INFO ZkEventThread: Starting ZkClient event thread.
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:host.name=ip-172-31-67-211.ec2.internal
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.version=1.8.0_252
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.vendor=Private Build
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.class.path=/home/ubuntu/spark-2.4.6-bin-hadoop2.7/conf/:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/metrics-jvm-3.1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/JavaEWAH-0.3.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-tags_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-collections-3.2.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-common-1.10.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jline-2.14.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/py4j-0.10.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javax.inject-2.4.0-b34.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-yarn-client-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/scala-xml_2.11-1.0.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/shims-0.7.45.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/slf4j-api-1.7.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/snappy-0.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/leveldbjni-all-1.8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/chill_2.11-0.9.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hk2-utils-2.4.0-b34.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javassist-3.18.1-GA.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-format-2.4.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hk2-locator-2.4.0-b34.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/pyrolite-4.13.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/xmlenc-0.52.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-module-jaxb-annotations-2.6.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/api-asn1-api-1.0.0-M20.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-encoding-1.10.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/okio-1.15.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-graphx_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/curator-framework-2.7.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-crypto-1.0.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jcl-over-slf4j-1.7.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-lang-2.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/stax-api-1.0-2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/apacheds-i18n-2.0.0-M15.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-mapreduce-client-shuffle-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/protobuf-java-2.5.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-core-2.6.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/scala-compiler-2.11.12.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/metrics-graphite-3.1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-streaming-kafka-0-8-assembly_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/json4s-core_2.11-3.5.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-column-1.10.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hive-jdbc-1.2.1.spark2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/api-util-1.0.0-M20.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-mapper-asl-1.9.13.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/univocity-parsers-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-common-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/antlr-2.7.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-yarn-server-common-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-container-servlet-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-streaming_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-hive-thriftserver_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-mapreduce-client-jobclient-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jsp-api-2.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/arpack_combined_all-0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jtransforms-2.4.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/kubernetes-model-4.6.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javax.annotation-api-1.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/apacheds-kerberos-codec-2.0.0-M15.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/curator-recipes-2.7.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-mapreduce-client-core-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-annotations-2.6.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/oro-2.0.8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/orc-shims-1.5.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/xbean-asm6-shaded-4.8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-yarn-common-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/json4s-jackson_2.11-3.5.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/calcite-avatica-1.2.0-incubating.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/breeze_2.11-0.13.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/htrace-core-3.1.0-incubating.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hive-metastore-1.2.1.spark2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-network-common_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-compiler-3.0.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hive-exec-1.2.1.spark2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-repl_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/guava-14.0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-yarn_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/libfb303-0.9.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-network-shuffle_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/datanucleus-api-jdo-3.2.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/antlr-runtime-3.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/janino-3.0.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/aopalliance-1.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/stax-api-1.0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-container-servlet-core-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javax.inject-1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-kubernetes_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-catalyst_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/RoaringBitmap-0.7.45.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-unsafe_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-core-asl-1.9.13.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-media-jaxb-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-tags_2.11-2.4.6-tests.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/log4j-1.2.17.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/core-1.1.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/kryo-shaded-4.0.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/antlr4-runtime-4.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/arrow-vector-0.10.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/macro-compat_2.11-1.1.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/snappy-java-1.1.7.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-xc-1.9.13.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jdo-api-3.0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/gson-2.2.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/json4s-ast_2.11-3.5.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-net-3.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/arrow-format-0.10.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/opencsv-2.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-yarn-server-web-proxy-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-annotations-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/orc-mapreduce-1.5.5-nohive.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jul-to-slf4j-1.7.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/datanucleus-core-3.2.10.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/netty-3.9.9.Final.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/avro-1.8.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-io-2.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/calcite-linq4j-1.2.0-incubating.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-hdfs-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/kubernetes-client-4.6.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-sketch_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-client-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-httpclient-3.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/mesos-1.4.0-shaded-protobuf.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hive-cli-1.2.1.spark2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jpam-1.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-compress-1.8.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/ST4-4.0.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hppc-0.7.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/okhttp-3.12.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javax.ws.rs-api-2.0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-math3-3.4.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-module-paranamer-2.7.9.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/machinist_2.11-0.6.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jodd-core-3.5.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/kubernetes-model-common-4.6.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-hadoop-bundle-1.6.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/xz-1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/generex-1.0.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/breeze-macros_2.11-0.13.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/activation-1.1.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/arrow-memory-0.10.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/avro-ipc-1.8.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/paranamer-2.8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-mllib_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hive-beeline-1.2.1.spark2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/json4s-scalap_2.11-3.5.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-pool-1.5.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-kvstore_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/slf4j-log4j12-1.7.16.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/objenesis-2.5.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/osgi-resource-locator-1.0.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/logging-interceptor-3.12.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-launcher_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/metrics-json-3.1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/scala-parser-combinators_2.11-1.1.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/automaton-1.11-8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/scala-library-2.11.12.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-jaxrs-1.9.13.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-module-scala_2.11-2.6.7.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-common-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/libthrift-0.9.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/super-csv-2.2.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/derby-10.12.1.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/stringtemplate-3.2.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-dataformat-yaml-2.6.7.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jetty-util-6.1.26.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-mapreduce-client-app-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-lang3-3.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-client-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jaxb-api-2.2.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-configuration-1.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/aircompressor-0.10.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jta-1.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-mapreduce-client-common-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hk2-api-2.4.0-b34.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/zstd-jni-1.3.2-2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-sql_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/flatbuffers-1.2.0-3f79e055.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-yarn-api-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/xercesImpl-2.9.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-cli-1.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javax.servlet-api-3.1.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-server-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/guice-servlet-3.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/ivy-2.4.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-hive_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spire-macros_2.11-0.13.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/httpclient-4.5.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/lz4-java-1.4.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/zookeeper-3.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/minlog-1.3.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/netty-all-4.1.47.Final.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/curator-client-2.7.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jetty-6.1.26.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/hadoop-auth-2.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/javolution-5.5.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-digester-1.8.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/compress-lzf-1.0.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-codec-1.10.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/shapeless_2.11-2.3.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/orc-core-1.5.5-nohive.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/chill-java-0.9.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-jackson-1.10.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/metrics-core-3.1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/guice-3.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/joda-time-2.9.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/calcite-core-1.2.0-incubating.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-beanutils-1.9.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/zjsonpatch-0.3.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jsr305-1.3.9.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-logging-1.1.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/commons-dbcp-1.4.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spire_2.11-0.13.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-core_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-mesos_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/scala-reflect-2.11.12.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jersey-guava-2.22.2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/datanucleus-rdbms-3.2.9.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/apache-log4j-extras-1.2.17.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/httpcore-4.4.10.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/spark-mllib-local_2.11-2.4.6.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/validation-api-1.1.0.Final.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/avro-mapred-1.8.2-hadoop2.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/jackson-databind-2.6.7.3.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/parquet-hadoop-1.10.1.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/aopalliance-repackaged-2.4.0-b34.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/stream-2.7.0.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/bonecp-0.8.0.RELEASE.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/eigenbase-properties-1.1.5.jar:/home/ubuntu/spark-2.4.6-bin-hadoop2.7/jars/snakeyaml-1.15.jar
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.io.tmpdir=/tmp
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:java.compiler=<NA>
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:os.name=Linux
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:os.arch=amd64
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:os.version=5.3.0-1023-aws
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:user.name=ubuntu
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:user.home=/home/ubuntu
+20/07/20 06:42:22 INFO ZooKeeper: Client environment:user.dir=/home/ubuntu
+20/07/20 06:42:22 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@3c38086a
+20/07/20 06:42:22 INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+20/07/20 06:42:22 INFO ClientCnxn: Socket connection established to localhost/127.0.0.1:2181, initiating session
+20/07/20 06:42:22 INFO ClientCnxn: Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x10000037cd30004, negotiated timeout = 6000
+20/07/20 06:42:22 INFO ZkClient: zookeeper state changed (SyncConnected)
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], starting auto committer every 60000 ms
+20/07/20 06:42:22 WARN AppInfo$: Can't read Kafka version from MANIFEST.MF. Possible cause: java.lang.NullPointerException
+20/07/20 06:42:22 INFO KafkaReceiver: Connected to localhost:2181
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], begin registering consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 in ZK
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], end registering consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 in ZK
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], starting watcher executor thread for consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], begin rebalancing consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 try #0
+20/07/20 06:42:22 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1595227342233] Stopping leader finder thread
+20/07/20 06:42:22 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1595227342233] Stopping all fetchers
+20/07/20 06:42:22 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1595227342233] All connections stopped
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Cleared all relevant queues for this fetcher
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Cleared the data chunks in all the consumer message iterators
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Committing all offsets after clearing the fetcher queues
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Releasing partition ownership
+20/07/20 06:42:22 INFO RangeAssignor: Consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 rebalancing the following partitions: ArrayBuffer(0) for topic california with consumers: List(spark-streaming_ip-172-31-67-211-1595227342192-6d547038-0)
+20/07/20 06:42:22 INFO RangeAssignor: spark-streaming_ip-172-31-67-211-1595227342192-6d547038-0 attempting to claim partition 0
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], spark-streaming_ip-172-31-67-211-1595227342192-6d547038-0 successfully owned partition 0 for topic california
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], Consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 selected partitions : california:0: fetched offset = 1865: consumed offset = 1865
+20/07/20 06:42:22 INFO ConsumerFetcherManager$LeaderFinderThread: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038-leader-finder-thread], Starting 
+20/07/20 06:42:22 INFO ZookeeperConsumerConnector: [spark-streaming_ip-172-31-67-211-1595227342192-6d547038], end rebalancing consumer spark-streaming_ip-172-31-67-211-1595227342192-6d547038 try #0
+20/07/20 06:42:22 INFO ReceiverSupervisorImpl: Called receiver 0 onStart
+20/07/20 06:42:22 INFO ReceiverSupervisorImpl: Waiting for receiver to be stopped
+20/07/20 06:42:22 INFO KafkaReceiver: Starting MessageHandler.
+20/07/20 06:42:22 INFO VerifiableProperties: Verifying properties
+20/07/20 06:42:22 INFO VerifiableProperties: Property client.id is overridden to spark-streaming
+20/07/20 06:42:22 INFO VerifiableProperties: Property metadata.broker.list is overridden to ip-172-31-67-211.ec2.internal:9092
+20/07/20 06:42:22 INFO VerifiableProperties: Property request.timeout.ms is overridden to 30000
+20/07/20 06:42:22 INFO ClientUtils$: Fetching metadata from broker id:0,host:ip-172-31-67-211.ec2.internal,port:9092 with correlation id 0 for 1 topic(s) Set(california)
+20/07/20 06:42:22 INFO SyncProducer: Connected to ip-172-31-67-211.ec2.internal:9092 for producing
+20/07/20 06:42:22 INFO SyncProducer: Disconnecting from ip-172-31-67-211.ec2.internal:9092
+20/07/20 06:42:22 INFO ConsumerFetcherThread: [ConsumerFetcherThread-spark-streaming_ip-172-31-67-211-1595227342192-6d547038-0-0], Starting 
+20/07/20 06:42:22 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1595227342233] Added fetcher for partitions ArrayBuffer([[california,0], initOffset 1865 to broker id:0,host:ip-172-31-67-211.ec2.internal,port:9092] )
+20/07/20 06:42:22 INFO MemoryStore: Block input-0-1595227342400 stored as values in memory (estimated size 810.7 KB, free 365.4 MB)
+20/07/20 06:42:22 INFO BlockManagerInfo: Added input-0-1595227342400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 810.7 KB, free: 365.5 MB)
+20/07/20 06:42:22 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:22 WARN BlockManager: Block input-0-1595227342400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:22 INFO BlockGenerator: Pushed block input-0-1595227342400
+20/07/20 06:42:25 INFO MemoryStore: Block input-0-1595227345200 stored as values in memory (estimated size 2.6 KB, free 365.4 MB)
+20/07/20 06:42:25 INFO BlockManagerInfo: Added input-0-1595227345200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.5 MB)
+20/07/20 06:42:25 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:25 WARN BlockManager: Block input-0-1595227345200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:25 INFO BlockGenerator: Pushed block input-0-1595227345200
+20/07/20 06:42:26 INFO MemoryStore: Block input-0-1595227346000 stored as values in memory (estimated size 4.3 KB, free 365.4 MB)
+20/07/20 06:42:26 INFO BlockManagerInfo: Added input-0-1595227346000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.3 KB, free: 365.5 MB)
+20/07/20 06:42:26 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:26 WARN BlockManager: Block input-0-1595227346000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:26 INFO BlockGenerator: Pushed block input-0-1595227346000
+20/07/20 06:42:26 INFO MemoryStore: Block input-0-1595227346400 stored as values in memory (estimated size 5.6 KB, free 365.4 MB)
+20/07/20 06:42:26 INFO BlockManagerInfo: Added input-0-1595227346400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.6 KB, free: 365.5 MB)
+20/07/20 06:42:26 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:26 WARN BlockManager: Block input-0-1595227346400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:26 INFO BlockGenerator: Pushed block input-0-1595227346400
+20/07/20 06:42:27 INFO MemoryStore: Block input-0-1595227347200 stored as values in memory (estimated size 2.5 KB, free 365.4 MB)
+20/07/20 06:42:27 INFO BlockManagerInfo: Added input-0-1595227347200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.5 MB)
+20/07/20 06:42:27 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:27 WARN BlockManager: Block input-0-1595227347200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:27 INFO BlockGenerator: Pushed block input-0-1595227347200
+20/07/20 06:42:28 INFO MemoryStore: Block input-0-1595227348400 stored as values in memory (estimated size 9.4 KB, free 365.4 MB)
+20/07/20 06:42:28 INFO BlockManagerInfo: Added input-0-1595227348400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 9.4 KB, free: 365.5 MB)
+20/07/20 06:42:28 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:28 WARN BlockManager: Block input-0-1595227348400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:28 INFO BlockGenerator: Pushed block input-0-1595227348400
+20/07/20 06:42:30 INFO MemoryStore: Block input-0-1595227350400 stored as values in memory (estimated size 2.7 KB, free 365.4 MB)
+20/07/20 06:42:30 INFO BlockManagerInfo: Added input-0-1595227350400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.5 MB)
+20/07/20 06:42:30 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:30 WARN BlockManager: Block input-0-1595227350400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:30 INFO BlockGenerator: Pushed block input-0-1595227350400
+20/07/20 06:42:31 INFO MemoryStore: Block input-0-1595227351200 stored as values in memory (estimated size 3.6 KB, free 365.4 MB)
+20/07/20 06:42:31 INFO BlockManagerInfo: Added input-0-1595227351200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.6 KB, free: 365.5 MB)
+20/07/20 06:42:31 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:31 WARN BlockManager: Block input-0-1595227351200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:31 INFO BlockGenerator: Pushed block input-0-1595227351200
+20/07/20 06:42:31 INFO MemoryStore: Block input-0-1595227351400 stored as values in memory (estimated size 4.5 KB, free 365.4 MB)
+20/07/20 06:42:31 INFO BlockManagerInfo: Added input-0-1595227351400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.5 KB, free: 365.5 MB)
+20/07/20 06:42:31 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:31 WARN BlockManager: Block input-0-1595227351400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:31 INFO BlockGenerator: Pushed block input-0-1595227351400
+20/07/20 06:42:31 INFO MemoryStore: Block input-0-1595227351600 stored as values in memory (estimated size 5.1 KB, free 365.4 MB)
+20/07/20 06:42:31 INFO BlockManagerInfo: Added input-0-1595227351600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.1 KB, free: 365.5 MB)
+20/07/20 06:42:31 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:31 WARN BlockManager: Block input-0-1595227351600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:31 INFO BlockGenerator: Pushed block input-0-1595227351600
+20/07/20 06:42:32 INFO MemoryStore: Block input-0-1595227352000 stored as values in memory (estimated size 5.4 KB, free 365.4 MB)
+20/07/20 06:42:32 INFO BlockManagerInfo: Added input-0-1595227352000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.4 KB, free: 365.4 MB)
+20/07/20 06:42:32 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:32 WARN BlockManager: Block input-0-1595227352000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:32 INFO BlockGenerator: Pushed block input-0-1595227352000
+20/07/20 06:42:34 INFO MemoryStore: Block input-0-1595227353800 stored as values in memory (estimated size 7.0 KB, free 365.4 MB)
+20/07/20 06:42:34 INFO BlockManagerInfo: Added input-0-1595227353800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 7.0 KB, free: 365.4 MB)
+20/07/20 06:42:34 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:34 WARN BlockManager: Block input-0-1595227353800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:34 INFO BlockGenerator: Pushed block input-0-1595227353800
+20/07/20 06:42:34 INFO MemoryStore: Block input-0-1595227354600 stored as values in memory (estimated size 2.8 KB, free 365.4 MB)
+20/07/20 06:42:34 INFO BlockManagerInfo: Added input-0-1595227354600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.4 MB)
+20/07/20 06:42:34 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:34 WARN BlockManager: Block input-0-1595227354600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:34 INFO BlockGenerator: Pushed block input-0-1595227354600
+20/07/20 06:42:36 INFO MemoryStore: Block input-0-1595227356400 stored as values in memory (estimated size 2.9 KB, free 365.4 MB)
+20/07/20 06:42:36 INFO BlockManagerInfo: Added input-0-1595227356400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.4 MB)
+20/07/20 06:42:36 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:36 WARN BlockManager: Block input-0-1595227356400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:36 INFO BlockGenerator: Pushed block input-0-1595227356400
+20/07/20 06:42:38 INFO MemoryStore: Block input-0-1595227358200 stored as values in memory (estimated size 2.8 KB, free 365.4 MB)
+20/07/20 06:42:38 INFO BlockManagerInfo: Added input-0-1595227358200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.4 MB)
+20/07/20 06:42:38 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:38 WARN BlockManager: Block input-0-1595227358200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:38 INFO BlockGenerator: Pushed block input-0-1595227358200
+20/07/20 06:42:39 INFO MemoryStore: Block input-0-1595227359000 stored as values in memory (estimated size 6.3 KB, free 365.4 MB)
+20/07/20 06:42:39 INFO BlockManagerInfo: Added input-0-1595227359000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.3 KB, free: 365.4 MB)
+20/07/20 06:42:39 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:39 WARN BlockManager: Block input-0-1595227359000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:39 INFO BlockGenerator: Pushed block input-0-1595227359000
+20/07/20 06:42:40 INFO MemoryStore: Block input-0-1595227360000 stored as values in memory (estimated size 10.3 KB, free 365.4 MB)
+20/07/20 06:42:40 INFO BlockManagerInfo: Added input-0-1595227360000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 10.3 KB, free: 365.4 MB)
+20/07/20 06:42:40 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:40 WARN BlockManager: Block input-0-1595227360000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:40 INFO BlockGenerator: Pushed block input-0-1595227360000
+20/07/20 06:42:41 INFO MemoryStore: Block input-0-1595227360800 stored as values in memory (estimated size 2.5 KB, free 365.4 MB)
+20/07/20 06:42:41 INFO BlockManagerInfo: Added input-0-1595227360800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.4 MB)
+20/07/20 06:42:41 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:41 WARN BlockManager: Block input-0-1595227360800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:41 INFO BlockGenerator: Pushed block input-0-1595227360800
+20/07/20 06:42:41 INFO MemoryStore: Block input-0-1595227361400 stored as values in memory (estimated size 2.7 KB, free 365.4 MB)
+20/07/20 06:42:41 INFO BlockManagerInfo: Added input-0-1595227361400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.4 MB)
+20/07/20 06:42:41 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:41 WARN BlockManager: Block input-0-1595227361400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:41 INFO BlockGenerator: Pushed block input-0-1595227361400
+20/07/20 06:42:42 INFO MemoryStore: Block input-0-1595227361800 stored as values in memory (estimated size 6.1 KB, free 365.4 MB)
+20/07/20 06:42:42 INFO BlockManagerInfo: Added input-0-1595227361800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.1 KB, free: 365.4 MB)
+20/07/20 06:42:42 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:42 WARN BlockManager: Block input-0-1595227361800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:42 INFO BlockGenerator: Pushed block input-0-1595227361800
+20/07/20 06:42:42 INFO MemoryStore: Block input-0-1595227362600 stored as values in memory (estimated size 2.7 KB, free 365.4 MB)
+20/07/20 06:42:42 INFO BlockManagerInfo: Added input-0-1595227362600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.4 MB)
+20/07/20 06:42:42 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:42 WARN BlockManager: Block input-0-1595227362600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:42 INFO BlockGenerator: Pushed block input-0-1595227362600
+20/07/20 06:42:43 INFO MemoryStore: Block input-0-1595227362800 stored as values in memory (estimated size 4.8 KB, free 365.4 MB)
+20/07/20 06:42:43 INFO BlockManagerInfo: Added input-0-1595227362800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.8 KB, free: 365.4 MB)
+20/07/20 06:42:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:43 WARN BlockManager: Block input-0-1595227362800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:43 INFO BlockGenerator: Pushed block input-0-1595227362800
+20/07/20 06:42:43 INFO MemoryStore: Block input-0-1595227363000 stored as values in memory (estimated size 2.6 KB, free 365.3 MB)
+20/07/20 06:42:43 INFO BlockManagerInfo: Added input-0-1595227363000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.4 MB)
+20/07/20 06:42:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:43 WARN BlockManager: Block input-0-1595227363000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:43 INFO BlockGenerator: Pushed block input-0-1595227363000
+20/07/20 06:42:43 INFO MemoryStore: Block input-0-1595227363200 stored as values in memory (estimated size 2.8 KB, free 365.3 MB)
+20/07/20 06:42:43 INFO BlockManagerInfo: Added input-0-1595227363200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.4 MB)
+20/07/20 06:42:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:43 WARN BlockManager: Block input-0-1595227363200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:43 INFO BlockGenerator: Pushed block input-0-1595227363200
+20/07/20 06:42:45 INFO MemoryStore: Block input-0-1595227364800 stored as values in memory (estimated size 3.7 KB, free 365.3 MB)
+20/07/20 06:42:45 INFO BlockManagerInfo: Added input-0-1595227364800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.7 KB, free: 365.4 MB)
+20/07/20 06:42:45 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:45 WARN BlockManager: Block input-0-1595227364800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:45 INFO BlockGenerator: Pushed block input-0-1595227364800
+20/07/20 06:42:45 INFO MemoryStore: Block input-0-1595227365000 stored as values in memory (estimated size 2.9 KB, free 365.3 MB)
+20/07/20 06:42:45 INFO BlockManagerInfo: Added input-0-1595227365000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.4 MB)
+20/07/20 06:42:45 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:45 WARN BlockManager: Block input-0-1595227365000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:45 INFO BlockGenerator: Pushed block input-0-1595227365000
+20/07/20 06:42:46 INFO MemoryStore: Block input-0-1595227366600 stored as values in memory (estimated size 5.7 KB, free 365.3 MB)
+20/07/20 06:42:46 INFO BlockManagerInfo: Added input-0-1595227366600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.7 KB, free: 365.4 MB)
+20/07/20 06:42:46 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:46 WARN BlockManager: Block input-0-1595227366600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:46 INFO BlockGenerator: Pushed block input-0-1595227366600
+20/07/20 06:42:48 INFO MemoryStore: Block input-0-1595227367800 stored as values in memory (estimated size 6.8 KB, free 365.3 MB)
+20/07/20 06:42:48 INFO BlockManagerInfo: Added input-0-1595227367800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.8 KB, free: 365.4 MB)
+20/07/20 06:42:48 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:48 WARN BlockManager: Block input-0-1595227367800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:48 INFO BlockGenerator: Pushed block input-0-1595227367800
+20/07/20 06:42:49 INFO MemoryStore: Block input-0-1595227369000 stored as values in memory (estimated size 4.8 KB, free 365.3 MB)
+20/07/20 06:42:49 INFO BlockManagerInfo: Added input-0-1595227369000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.8 KB, free: 365.4 MB)
+20/07/20 06:42:49 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:49 WARN BlockManager: Block input-0-1595227369000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:49 INFO BlockGenerator: Pushed block input-0-1595227369000
+20/07/20 06:42:50 INFO MemoryStore: Block input-0-1595227370600 stored as values in memory (estimated size 2.4 KB, free 365.3 MB)
+20/07/20 06:42:50 INFO BlockManagerInfo: Added input-0-1595227370600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.4 KB, free: 365.4 MB)
+20/07/20 06:42:50 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:50 WARN BlockManager: Block input-0-1595227370600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:50 INFO BlockGenerator: Pushed block input-0-1595227370600
+20/07/20 06:42:52 INFO MemoryStore: Block input-0-1595227372400 stored as values in memory (estimated size 7.4 KB, free 365.3 MB)
+20/07/20 06:42:52 INFO BlockManagerInfo: Added input-0-1595227372400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 7.4 KB, free: 365.4 MB)
+20/07/20 06:42:52 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:52 WARN BlockManager: Block input-0-1595227372400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:52 INFO BlockGenerator: Pushed block input-0-1595227372400
+20/07/20 06:42:54 INFO MemoryStore: Block input-0-1595227374000 stored as values in memory (estimated size 2.5 KB, free 365.3 MB)
+20/07/20 06:42:54 INFO BlockManagerInfo: Added input-0-1595227374000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.4 MB)
+20/07/20 06:42:54 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:54 WARN BlockManager: Block input-0-1595227374000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:54 INFO BlockGenerator: Pushed block input-0-1595227374000
+20/07/20 06:42:54 INFO MemoryStore: Block input-0-1595227374200 stored as values in memory (estimated size 2.5 KB, free 365.3 MB)
+20/07/20 06:42:54 INFO BlockManagerInfo: Added input-0-1595227374200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.4 MB)
+20/07/20 06:42:54 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:54 WARN BlockManager: Block input-0-1595227374200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:54 INFO BlockGenerator: Pushed block input-0-1595227374200
+20/07/20 06:42:55 INFO MemoryStore: Block input-0-1595227375400 stored as values in memory (estimated size 2.8 KB, free 365.3 MB)
+20/07/20 06:42:55 INFO BlockManagerInfo: Added input-0-1595227375400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.4 MB)
+20/07/20 06:42:55 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:55 WARN BlockManager: Block input-0-1595227375400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:55 INFO BlockGenerator: Pushed block input-0-1595227375400
+20/07/20 06:42:55 INFO MemoryStore: Block input-0-1595227375600 stored as values in memory (estimated size 3.2 KB, free 365.3 MB)
+20/07/20 06:42:55 INFO BlockManagerInfo: Added input-0-1595227375600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.2 KB, free: 365.3 MB)
+20/07/20 06:42:55 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:55 WARN BlockManager: Block input-0-1595227375600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:55 INFO BlockGenerator: Pushed block input-0-1595227375600
+20/07/20 06:42:56 INFO MemoryStore: Block input-0-1595227375800 stored as values in memory (estimated size 2.5 KB, free 365.3 MB)
+20/07/20 06:42:56 INFO BlockManagerInfo: Added input-0-1595227375800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.3 MB)
+20/07/20 06:42:56 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:56 WARN BlockManager: Block input-0-1595227375800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:56 INFO BlockGenerator: Pushed block input-0-1595227375800
+20/07/20 06:42:56 INFO MemoryStore: Block input-0-1595227376400 stored as values in memory (estimated size 3.8 KB, free 365.3 MB)
+20/07/20 06:42:56 INFO BlockManagerInfo: Added input-0-1595227376400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.8 KB, free: 365.3 MB)
+20/07/20 06:42:56 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:56 WARN BlockManager: Block input-0-1595227376400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:56 INFO BlockGenerator: Pushed block input-0-1595227376400
+20/07/20 06:42:56 INFO MemoryStore: Block input-0-1595227376600 stored as values in memory (estimated size 8.0 KB, free 365.3 MB)
+20/07/20 06:42:56 INFO BlockManagerInfo: Added input-0-1595227376600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 8.0 KB, free: 365.3 MB)
+20/07/20 06:42:56 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:56 WARN BlockManager: Block input-0-1595227376600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:56 INFO BlockGenerator: Pushed block input-0-1595227376600
+20/07/20 06:42:58 INFO MemoryStore: Block input-0-1595227378200 stored as values in memory (estimated size 2.6 KB, free 365.3 MB)
+20/07/20 06:42:58 INFO BlockManagerInfo: Added input-0-1595227378200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.3 MB)
+20/07/20 06:42:58 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:42:58 WARN BlockManager: Block input-0-1595227378200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:42:58 INFO BlockGenerator: Pushed block input-0-1595227378200
+20/07/20 06:43:00 INFO MemoryStore: Block input-0-1595227380200 stored as values in memory (estimated size 4.9 KB, free 365.3 MB)
+20/07/20 06:43:00 INFO BlockManagerInfo: Added input-0-1595227380200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.9 KB, free: 365.3 MB)
+20/07/20 06:43:00 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:00 WARN BlockManager: Block input-0-1595227380200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:00 INFO BlockGenerator: Pushed block input-0-1595227380200
+20/07/20 06:43:00 INFO MemoryStore: Block input-0-1595227380400 stored as values in memory (estimated size 9.1 KB, free 365.3 MB)
+20/07/20 06:43:00 INFO BlockManagerInfo: Added input-0-1595227380400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 9.1 KB, free: 365.3 MB)
+20/07/20 06:43:00 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:00 WARN BlockManager: Block input-0-1595227380400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:00 INFO BlockGenerator: Pushed block input-0-1595227380400
+20/07/20 06:43:02 INFO MemoryStore: Block input-0-1595227382200 stored as values in memory (estimated size 6.1 KB, free 365.3 MB)
+20/07/20 06:43:02 INFO BlockManagerInfo: Added input-0-1595227382200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.1 KB, free: 365.3 MB)
+20/07/20 06:43:02 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:02 WARN BlockManager: Block input-0-1595227382200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:02 INFO BlockGenerator: Pushed block input-0-1595227382200
+20/07/20 06:43:03 INFO MemoryStore: Block input-0-1595227382800 stored as values in memory (estimated size 13.5 KB, free 365.3 MB)
+20/07/20 06:43:03 INFO BlockManagerInfo: Added input-0-1595227382800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 13.5 KB, free: 365.3 MB)
+20/07/20 06:43:03 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:03 WARN BlockManager: Block input-0-1595227382800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:03 INFO BlockGenerator: Pushed block input-0-1595227382800
+20/07/20 06:43:03 INFO MemoryStore: Block input-0-1595227383400 stored as values in memory (estimated size 2.6 KB, free 365.2 MB)
+20/07/20 06:43:03 INFO BlockManagerInfo: Added input-0-1595227383400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.3 MB)
+20/07/20 06:43:03 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:03 WARN BlockManager: Block input-0-1595227383400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:03 INFO BlockGenerator: Pushed block input-0-1595227383400
+20/07/20 06:43:04 INFO MemoryStore: Block input-0-1595227383800 stored as values in memory (estimated size 7.2 KB, free 365.2 MB)
+20/07/20 06:43:04 INFO BlockManagerInfo: Added input-0-1595227383800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 7.2 KB, free: 365.3 MB)
+20/07/20 06:43:04 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:04 WARN BlockManager: Block input-0-1595227383800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:04 INFO BlockGenerator: Pushed block input-0-1595227383800
+20/07/20 06:43:04 INFO MemoryStore: Block input-0-1595227384400 stored as values in memory (estimated size 2.5 KB, free 365.2 MB)
+20/07/20 06:43:04 INFO BlockManagerInfo: Added input-0-1595227384400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.3 MB)
+20/07/20 06:43:04 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:04 WARN BlockManager: Block input-0-1595227384400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:04 INFO BlockGenerator: Pushed block input-0-1595227384400
+20/07/20 06:43:05 INFO MemoryStore: Block input-0-1595227385000 stored as values in memory (estimated size 2.8 KB, free 365.2 MB)
+20/07/20 06:43:05 INFO BlockManagerInfo: Added input-0-1595227385000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.3 MB)
+20/07/20 06:43:05 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:05 WARN BlockManager: Block input-0-1595227385000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:05 INFO BlockGenerator: Pushed block input-0-1595227385000
+20/07/20 06:43:05 INFO MemoryStore: Block input-0-1595227385600 stored as values in memory (estimated size 4.6 KB, free 365.2 MB)
+20/07/20 06:43:05 INFO BlockManagerInfo: Added input-0-1595227385600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.6 KB, free: 365.3 MB)
+20/07/20 06:43:05 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:05 WARN BlockManager: Block input-0-1595227385600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:05 INFO BlockGenerator: Pushed block input-0-1595227385600
+20/07/20 06:43:06 INFO MemoryStore: Block input-0-1595227386400 stored as values in memory (estimated size 5.4 KB, free 365.2 MB)
+20/07/20 06:43:06 INFO BlockManagerInfo: Added input-0-1595227386400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.4 KB, free: 365.3 MB)
+20/07/20 06:43:06 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:06 WARN BlockManager: Block input-0-1595227386400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:06 INFO BlockGenerator: Pushed block input-0-1595227386400
+20/07/20 06:43:09 INFO MemoryStore: Block input-0-1595227389200 stored as values in memory (estimated size 2.7 KB, free 365.2 MB)
+20/07/20 06:43:09 INFO BlockManagerInfo: Added input-0-1595227389200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.3 MB)
+20/07/20 06:43:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:09 WARN BlockManager: Block input-0-1595227389200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:09 INFO BlockGenerator: Pushed block input-0-1595227389200
+20/07/20 06:43:09 INFO MemoryStore: Block input-0-1595227389600 stored as values in memory (estimated size 4.3 KB, free 365.2 MB)
+20/07/20 06:43:09 INFO BlockManagerInfo: Added input-0-1595227389600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.3 KB, free: 365.3 MB)
+20/07/20 06:43:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:09 WARN BlockManager: Block input-0-1595227389600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:09 INFO BlockGenerator: Pushed block input-0-1595227389600
+20/07/20 06:43:10 INFO MemoryStore: Block input-0-1595227389800 stored as values in memory (estimated size 8.9 KB, free 365.2 MB)
+20/07/20 06:43:10 INFO BlockManagerInfo: Added input-0-1595227389800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 8.9 KB, free: 365.3 MB)
+20/07/20 06:43:10 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:10 WARN BlockManager: Block input-0-1595227389800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:10 INFO BlockGenerator: Pushed block input-0-1595227389800
+20/07/20 06:43:10 INFO MemoryStore: Block input-0-1595227390200 stored as values in memory (estimated size 10.3 KB, free 365.2 MB)
+20/07/20 06:43:10 INFO BlockManagerInfo: Added input-0-1595227390200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 10.3 KB, free: 365.2 MB)
+20/07/20 06:43:10 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:10 WARN BlockManager: Block input-0-1595227390200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:10 INFO BlockGenerator: Pushed block input-0-1595227390200
+20/07/20 06:43:11 INFO MemoryStore: Block input-0-1595227391200 stored as values in memory (estimated size 3.3 KB, free 365.2 MB)
+20/07/20 06:43:11 INFO BlockManagerInfo: Added input-0-1595227391200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.3 KB, free: 365.2 MB)
+20/07/20 06:43:11 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:11 WARN BlockManager: Block input-0-1595227391200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:11 INFO BlockGenerator: Pushed block input-0-1595227391200
+20/07/20 06:43:12 INFO MemoryStore: Block input-0-1595227392000 stored as values in memory (estimated size 4.0 KB, free 365.2 MB)
+20/07/20 06:43:12 INFO BlockManagerInfo: Added input-0-1595227392000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.0 KB, free: 365.2 MB)
+20/07/20 06:43:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:12 WARN BlockManager: Block input-0-1595227392000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:12 INFO BlockGenerator: Pushed block input-0-1595227392000
+20/07/20 06:43:12 INFO MemoryStore: Block input-0-1595227392200 stored as values in memory (estimated size 4.2 KB, free 365.2 MB)
+20/07/20 06:43:12 INFO BlockManagerInfo: Added input-0-1595227392200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.2 KB, free: 365.2 MB)
+20/07/20 06:43:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:12 WARN BlockManager: Block input-0-1595227392200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:12 INFO BlockGenerator: Pushed block input-0-1595227392200
+20/07/20 06:43:12 INFO MemoryStore: Block input-0-1595227392400 stored as values in memory (estimated size 2.6 KB, free 365.2 MB)
+20/07/20 06:43:12 INFO BlockManagerInfo: Added input-0-1595227392400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.2 MB)
+20/07/20 06:43:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:12 WARN BlockManager: Block input-0-1595227392400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:12 INFO BlockGenerator: Pushed block input-0-1595227392400
+20/07/20 06:43:12 INFO MemoryStore: Block input-0-1595227392600 stored as values in memory (estimated size 3.4 KB, free 365.2 MB)
+20/07/20 06:43:12 INFO BlockManagerInfo: Added input-0-1595227392600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.4 KB, free: 365.2 MB)
+20/07/20 06:43:12 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:12 WARN BlockManager: Block input-0-1595227392600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:12 INFO BlockGenerator: Pushed block input-0-1595227392600
+20/07/20 06:43:13 INFO MemoryStore: Block input-0-1595227393200 stored as values in memory (estimated size 2.6 KB, free 365.2 MB)
+20/07/20 06:43:13 INFO BlockManagerInfo: Added input-0-1595227393200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.2 MB)
+20/07/20 06:43:13 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:13 WARN BlockManager: Block input-0-1595227393200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:13 INFO BlockGenerator: Pushed block input-0-1595227393200
+20/07/20 06:43:14 INFO MemoryStore: Block input-0-1595227393800 stored as values in memory (estimated size 2.6 KB, free 365.2 MB)
+20/07/20 06:43:14 INFO BlockManagerInfo: Added input-0-1595227393800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.2 MB)
+20/07/20 06:43:14 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:14 WARN BlockManager: Block input-0-1595227393800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:14 INFO BlockGenerator: Pushed block input-0-1595227393800
+20/07/20 06:43:14 INFO MemoryStore: Block input-0-1595227394000 stored as values in memory (estimated size 2.7 KB, free 365.2 MB)
+20/07/20 06:43:14 INFO BlockManagerInfo: Added input-0-1595227394000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.2 MB)
+20/07/20 06:43:14 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:14 WARN BlockManager: Block input-0-1595227394000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:14 INFO BlockGenerator: Pushed block input-0-1595227394000
+20/07/20 06:43:14 INFO MemoryStore: Block input-0-1595227394600 stored as values in memory (estimated size 2.8 KB, free 365.2 MB)
+20/07/20 06:43:14 INFO BlockManagerInfo: Added input-0-1595227394600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.2 MB)
+20/07/20 06:43:14 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:14 WARN BlockManager: Block input-0-1595227394600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:14 INFO BlockGenerator: Pushed block input-0-1595227394600
+20/07/20 06:43:15 INFO MemoryStore: Block input-0-1595227395000 stored as values in memory (estimated size 8.8 KB, free 365.2 MB)
+20/07/20 06:43:15 INFO BlockManagerInfo: Added input-0-1595227395000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 8.8 KB, free: 365.2 MB)
+20/07/20 06:43:15 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:15 WARN BlockManager: Block input-0-1595227395000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:15 INFO BlockGenerator: Pushed block input-0-1595227395000
+20/07/20 06:43:16 INFO MemoryStore: Block input-0-1595227396000 stored as values in memory (estimated size 4.5 KB, free 365.2 MB)
+20/07/20 06:43:16 INFO BlockManagerInfo: Added input-0-1595227396000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.5 KB, free: 365.2 MB)
+20/07/20 06:43:16 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:16 WARN BlockManager: Block input-0-1595227396000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:16 INFO BlockGenerator: Pushed block input-0-1595227396000
+20/07/20 06:43:17 INFO MemoryStore: Block input-0-1595227397600 stored as values in memory (estimated size 3.5 KB, free 365.2 MB)
+20/07/20 06:43:17 INFO BlockManagerInfo: Added input-0-1595227397600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.5 KB, free: 365.2 MB)
+20/07/20 06:43:17 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:17 WARN BlockManager: Block input-0-1595227397600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:17 INFO BlockGenerator: Pushed block input-0-1595227397600
+20/07/20 06:43:18 INFO MemoryStore: Block input-0-1595227397800 stored as values in memory (estimated size 8.9 KB, free 365.1 MB)
+20/07/20 06:43:18 INFO BlockManagerInfo: Added input-0-1595227397800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 8.9 KB, free: 365.2 MB)
+20/07/20 06:43:18 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:18 WARN BlockManager: Block input-0-1595227397800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:18 INFO BlockGenerator: Pushed block input-0-1595227397800
+20/07/20 06:43:19 INFO MemoryStore: Block input-0-1595227398800 stored as values in memory (estimated size 2.9 KB, free 365.1 MB)
+20/07/20 06:43:19 INFO BlockManagerInfo: Added input-0-1595227398800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.2 MB)
+20/07/20 06:43:19 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:19 WARN BlockManager: Block input-0-1595227398800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:19 INFO BlockGenerator: Pushed block input-0-1595227398800
+20/07/20 06:43:19 INFO MemoryStore: Block input-0-1595227399200 stored as values in memory (estimated size 2.7 KB, free 365.1 MB)
+20/07/20 06:43:19 INFO BlockManagerInfo: Added input-0-1595227399200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.2 MB)
+20/07/20 06:43:19 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:19 WARN BlockManager: Block input-0-1595227399200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:19 INFO BlockGenerator: Pushed block input-0-1595227399200
+20/07/20 06:43:19 INFO MemoryStore: Block input-0-1595227399400 stored as values in memory (estimated size 2.8 KB, free 365.1 MB)
+20/07/20 06:43:19 INFO BlockManagerInfo: Added input-0-1595227399400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.2 MB)
+20/07/20 06:43:19 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:19 WARN BlockManager: Block input-0-1595227399400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:19 INFO BlockGenerator: Pushed block input-0-1595227399400
+20/07/20 06:43:21 INFO MemoryStore: Block input-0-1595227401400 stored as values in memory (estimated size 2.5 KB, free 365.1 MB)
+20/07/20 06:43:21 INFO BlockManagerInfo: Added input-0-1595227401400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.2 MB)
+20/07/20 06:43:21 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:21 WARN BlockManager: Block input-0-1595227401400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:21 INFO BlockGenerator: Pushed block input-0-1595227401400
+20/07/20 06:43:22 INFO MemoryStore: Block input-0-1595227402000 stored as values in memory (estimated size 3.8 KB, free 365.1 MB)
+20/07/20 06:43:22 INFO BlockManagerInfo: Added input-0-1595227402000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.8 KB, free: 365.2 MB)
+20/07/20 06:43:22 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:22 WARN BlockManager: Block input-0-1595227402000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:22 INFO BlockGenerator: Pushed block input-0-1595227402000
+20/07/20 06:43:22 INFO MemoryStore: Block input-0-1595227402600 stored as values in memory (estimated size 10.3 KB, free 365.1 MB)
+20/07/20 06:43:22 INFO BlockManagerInfo: Added input-0-1595227402600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 10.3 KB, free: 365.2 MB)
+20/07/20 06:43:22 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:22 WARN BlockManager: Block input-0-1595227402600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:22 INFO BlockGenerator: Pushed block input-0-1595227402600
+20/07/20 06:43:23 INFO MemoryStore: Block input-0-1595227403200 stored as values in memory (estimated size 2.6 KB, free 365.1 MB)
+20/07/20 06:43:23 INFO BlockManagerInfo: Added input-0-1595227403200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.2 MB)
+20/07/20 06:43:23 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:23 WARN BlockManager: Block input-0-1595227403200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:23 INFO BlockGenerator: Pushed block input-0-1595227403200
+20/07/20 06:43:23 INFO MemoryStore: Block input-0-1595227403600 stored as values in memory (estimated size 3.8 KB, free 365.1 MB)
+20/07/20 06:43:23 INFO BlockManagerInfo: Added input-0-1595227403600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.8 KB, free: 365.2 MB)
+20/07/20 06:43:23 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:23 WARN BlockManager: Block input-0-1595227403600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:23 INFO BlockGenerator: Pushed block input-0-1595227403600
+20/07/20 06:43:24 INFO MemoryStore: Block input-0-1595227404000 stored as values in memory (estimated size 2.9 KB, free 365.1 MB)
+20/07/20 06:43:24 INFO BlockManagerInfo: Added input-0-1595227404000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.2 MB)
+20/07/20 06:43:24 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:24 WARN BlockManager: Block input-0-1595227404000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:24 INFO BlockGenerator: Pushed block input-0-1595227404000
+20/07/20 06:43:24 INFO MemoryStore: Block input-0-1595227404600 stored as values in memory (estimated size 6.4 KB, free 365.1 MB)
+20/07/20 06:43:24 INFO BlockManagerInfo: Added input-0-1595227404600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.4 KB, free: 365.2 MB)
+20/07/20 06:43:24 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:24 WARN BlockManager: Block input-0-1595227404600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:24 INFO BlockGenerator: Pushed block input-0-1595227404600
+20/07/20 06:43:25 INFO MemoryStore: Block input-0-1595227405000 stored as values in memory (estimated size 4.1 KB, free 365.1 MB)
+20/07/20 06:43:25 INFO BlockManagerInfo: Added input-0-1595227405000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.1 KB, free: 365.2 MB)
+20/07/20 06:43:25 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:25 WARN BlockManager: Block input-0-1595227405000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:25 INFO BlockGenerator: Pushed block input-0-1595227405000
+20/07/20 06:43:27 INFO MemoryStore: Block input-0-1595227406800 stored as values in memory (estimated size 3.5 KB, free 365.1 MB)
+20/07/20 06:43:27 INFO BlockManagerInfo: Added input-0-1595227406800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.5 KB, free: 365.1 MB)
+20/07/20 06:43:27 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:27 WARN BlockManager: Block input-0-1595227406800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:27 INFO BlockGenerator: Pushed block input-0-1595227406800
+20/07/20 06:43:27 INFO MemoryStore: Block input-0-1595227407000 stored as values in memory (estimated size 3.2 KB, free 365.1 MB)
+20/07/20 06:43:27 INFO BlockManagerInfo: Added input-0-1595227407000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.2 KB, free: 365.1 MB)
+20/07/20 06:43:27 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:27 WARN BlockManager: Block input-0-1595227407000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:27 INFO BlockGenerator: Pushed block input-0-1595227407000
+20/07/20 06:43:28 INFO MemoryStore: Block input-0-1595227408000 stored as values in memory (estimated size 2.6 KB, free 365.1 MB)
+20/07/20 06:43:28 INFO BlockManagerInfo: Added input-0-1595227408000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.1 MB)
+20/07/20 06:43:28 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:28 WARN BlockManager: Block input-0-1595227408000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:28 INFO BlockGenerator: Pushed block input-0-1595227408000
+20/07/20 06:43:29 INFO MemoryStore: Block input-0-1595227409000 stored as values in memory (estimated size 7.0 KB, free 365.1 MB)
+20/07/20 06:43:29 INFO BlockManagerInfo: Added input-0-1595227409000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 7.0 KB, free: 365.1 MB)
+20/07/20 06:43:29 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:29 WARN BlockManager: Block input-0-1595227409000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:29 INFO BlockGenerator: Pushed block input-0-1595227409000
+20/07/20 06:43:31 INFO MemoryStore: Block input-0-1595227410800 stored as values in memory (estimated size 2.9 KB, free 365.1 MB)
+20/07/20 06:43:31 INFO BlockManagerInfo: Added input-0-1595227410800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.1 MB)
+20/07/20 06:43:31 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:31 WARN BlockManager: Block input-0-1595227410800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:31 INFO BlockGenerator: Pushed block input-0-1595227410800
+20/07/20 06:43:31 INFO MemoryStore: Block input-0-1595227411600 stored as values in memory (estimated size 2.7 KB, free 365.1 MB)
+20/07/20 06:43:31 INFO BlockManagerInfo: Added input-0-1595227411600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.7 KB, free: 365.1 MB)
+20/07/20 06:43:31 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:31 WARN BlockManager: Block input-0-1595227411600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:31 INFO BlockGenerator: Pushed block input-0-1595227411600
+20/07/20 06:43:32 INFO MemoryStore: Block input-0-1595227412400 stored as values in memory (estimated size 2.6 KB, free 365.1 MB)
+20/07/20 06:43:32 INFO BlockManagerInfo: Added input-0-1595227412400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.1 MB)
+20/07/20 06:43:32 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:32 WARN BlockManager: Block input-0-1595227412400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:32 INFO BlockGenerator: Pushed block input-0-1595227412400
+20/07/20 06:43:32 INFO MemoryStore: Block input-0-1595227412600 stored as values in memory (estimated size 4.3 KB, free 365.1 MB)
+20/07/20 06:43:32 INFO BlockManagerInfo: Added input-0-1595227412600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.3 KB, free: 365.1 MB)
+20/07/20 06:43:32 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:32 WARN BlockManager: Block input-0-1595227412600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:32 INFO BlockGenerator: Pushed block input-0-1595227412600
+20/07/20 06:43:33 INFO MemoryStore: Block input-0-1595227413600 stored as values in memory (estimated size 5.0 KB, free 365.1 MB)
+20/07/20 06:43:33 INFO BlockManagerInfo: Added input-0-1595227413600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.0 KB, free: 365.1 MB)
+20/07/20 06:43:33 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:33 WARN BlockManager: Block input-0-1595227413600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:33 INFO BlockGenerator: Pushed block input-0-1595227413600
+20/07/20 06:43:34 INFO MemoryStore: Block input-0-1595227414000 stored as values in memory (estimated size 4.0 KB, free 365.1 MB)
+20/07/20 06:43:34 INFO BlockManagerInfo: Added input-0-1595227414000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.0 KB, free: 365.1 MB)
+20/07/20 06:43:34 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:34 WARN BlockManager: Block input-0-1595227414000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:34 INFO BlockGenerator: Pushed block input-0-1595227414000
+20/07/20 06:43:34 INFO MemoryStore: Block input-0-1595227414200 stored as values in memory (estimated size 6.0 KB, free 365.1 MB)
+20/07/20 06:43:34 INFO BlockManagerInfo: Added input-0-1595227414200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.0 KB, free: 365.1 MB)
+20/07/20 06:43:34 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:34 WARN BlockManager: Block input-0-1595227414200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:34 INFO BlockGenerator: Pushed block input-0-1595227414200
+20/07/20 06:43:35 INFO MemoryStore: Block input-0-1595227415600 stored as values in memory (estimated size 2.8 KB, free 365.1 MB)
+20/07/20 06:43:35 INFO BlockManagerInfo: Added input-0-1595227415600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.1 MB)
+20/07/20 06:43:35 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:35 WARN BlockManager: Block input-0-1595227415600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:35 INFO BlockGenerator: Pushed block input-0-1595227415600
+20/07/20 06:43:36 INFO MemoryStore: Block input-0-1595227415800 stored as values in memory (estimated size 3.0 KB, free 365.1 MB)
+20/07/20 06:43:36 INFO BlockManagerInfo: Added input-0-1595227415800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.0 KB, free: 365.1 MB)
+20/07/20 06:43:36 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:36 WARN BlockManager: Block input-0-1595227415800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:36 INFO BlockGenerator: Pushed block input-0-1595227415800
+20/07/20 06:43:36 INFO MemoryStore: Block input-0-1595227416600 stored as values in memory (estimated size 2.6 KB, free 365.1 MB)
+20/07/20 06:43:36 INFO BlockManagerInfo: Added input-0-1595227416600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.1 MB)
+20/07/20 06:43:36 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:36 WARN BlockManager: Block input-0-1595227416600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:36 INFO BlockGenerator: Pushed block input-0-1595227416600
+20/07/20 06:43:38 INFO MemoryStore: Block input-0-1595227418000 stored as values in memory (estimated size 3.0 KB, free 365.1 MB)
+20/07/20 06:43:38 INFO BlockManagerInfo: Added input-0-1595227418000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.0 KB, free: 365.1 MB)
+20/07/20 06:43:38 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:38 WARN BlockManager: Block input-0-1595227418000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:38 INFO BlockGenerator: Pushed block input-0-1595227418000
+20/07/20 06:43:38 INFO MemoryStore: Block input-0-1595227418200 stored as values in memory (estimated size 3.9 KB, free 365.0 MB)
+20/07/20 06:43:38 INFO BlockManagerInfo: Added input-0-1595227418200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.9 KB, free: 365.1 MB)
+20/07/20 06:43:38 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:38 WARN BlockManager: Block input-0-1595227418200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:38 INFO BlockGenerator: Pushed block input-0-1595227418200
+20/07/20 06:43:38 INFO MemoryStore: Block input-0-1595227418400 stored as values in memory (estimated size 3.5 KB, free 365.0 MB)
+20/07/20 06:43:38 INFO BlockManagerInfo: Added input-0-1595227418400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.5 KB, free: 365.1 MB)
+20/07/20 06:43:38 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:38 WARN BlockManager: Block input-0-1595227418400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:38 INFO BlockGenerator: Pushed block input-0-1595227418400
+20/07/20 06:43:39 INFO MemoryStore: Block input-0-1595227419400 stored as values in memory (estimated size 5.1 KB, free 365.0 MB)
+20/07/20 06:43:39 INFO BlockManagerInfo: Added input-0-1595227419400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.1 KB, free: 365.1 MB)
+20/07/20 06:43:39 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:39 WARN BlockManager: Block input-0-1595227419400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:39 INFO BlockGenerator: Pushed block input-0-1595227419400
+20/07/20 06:43:42 INFO MemoryStore: Block input-0-1595227422400 stored as values in memory (estimated size 6.4 KB, free 365.0 MB)
+20/07/20 06:43:42 INFO BlockManagerInfo: Added input-0-1595227422400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.4 KB, free: 365.1 MB)
+20/07/20 06:43:42 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:42 WARN BlockManager: Block input-0-1595227422400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:42 INFO BlockGenerator: Pushed block input-0-1595227422400
+20/07/20 06:43:43 INFO MemoryStore: Block input-0-1595227422800 stored as values in memory (estimated size 2.6 KB, free 365.0 MB)
+20/07/20 06:43:43 INFO BlockManagerInfo: Added input-0-1595227422800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.1 MB)
+20/07/20 06:43:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:43 WARN BlockManager: Block input-0-1595227422800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:43 INFO BlockGenerator: Pushed block input-0-1595227422800
+20/07/20 06:43:43 INFO MemoryStore: Block input-0-1595227423400 stored as values in memory (estimated size 2.9 KB, free 365.0 MB)
+20/07/20 06:43:43 INFO BlockManagerInfo: Added input-0-1595227423400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.1 MB)
+20/07/20 06:43:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:43 WARN BlockManager: Block input-0-1595227423400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:43 INFO BlockGenerator: Pushed block input-0-1595227423400
+20/07/20 06:43:43 INFO MemoryStore: Block input-0-1595227423600 stored as values in memory (estimated size 2.6 KB, free 365.0 MB)
+20/07/20 06:43:43 INFO BlockManagerInfo: Added input-0-1595227423600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.1 MB)
+20/07/20 06:43:43 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:43 WARN BlockManager: Block input-0-1595227423600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:43 INFO BlockGenerator: Pushed block input-0-1595227423600
+20/07/20 06:43:44 INFO MemoryStore: Block input-0-1595227424200 stored as values in memory (estimated size 6.5 KB, free 365.0 MB)
+20/07/20 06:43:44 INFO BlockManagerInfo: Added input-0-1595227424200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.5 KB, free: 365.1 MB)
+20/07/20 06:43:44 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:44 WARN BlockManager: Block input-0-1595227424200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:44 INFO BlockGenerator: Pushed block input-0-1595227424200
+20/07/20 06:43:44 INFO MemoryStore: Block input-0-1595227424400 stored as values in memory (estimated size 3.9 KB, free 365.0 MB)
+20/07/20 06:43:44 INFO BlockManagerInfo: Added input-0-1595227424400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.9 KB, free: 365.1 MB)
+20/07/20 06:43:44 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:44 WARN BlockManager: Block input-0-1595227424400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:44 INFO BlockGenerator: Pushed block input-0-1595227424400
+20/07/20 06:43:46 INFO MemoryStore: Block input-0-1595227426000 stored as values in memory (estimated size 2.5 KB, free 365.0 MB)
+20/07/20 06:43:46 INFO BlockManagerInfo: Added input-0-1595227426000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.1 MB)
+20/07/20 06:43:46 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:46 WARN BlockManager: Block input-0-1595227426000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:46 INFO BlockGenerator: Pushed block input-0-1595227426000
+20/07/20 06:43:46 INFO MemoryStore: Block input-0-1595227426200 stored as values in memory (estimated size 2.5 KB, free 365.0 MB)
+20/07/20 06:43:46 INFO BlockManagerInfo: Added input-0-1595227426200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 365.1 MB)
+20/07/20 06:43:46 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:46 WARN BlockManager: Block input-0-1595227426200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:46 INFO BlockGenerator: Pushed block input-0-1595227426200
+20/07/20 06:43:46 INFO MemoryStore: Block input-0-1595227426600 stored as values in memory (estimated size 6.0 KB, free 365.0 MB)
+20/07/20 06:43:46 INFO BlockManagerInfo: Added input-0-1595227426600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.0 KB, free: 365.1 MB)
+20/07/20 06:43:46 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:46 WARN BlockManager: Block input-0-1595227426600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:46 INFO BlockGenerator: Pushed block input-0-1595227426600
+20/07/20 06:43:47 INFO MemoryStore: Block input-0-1595227427200 stored as values in memory (estimated size 3.0 KB, free 365.0 MB)
+20/07/20 06:43:47 INFO BlockManagerInfo: Added input-0-1595227427200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.0 KB, free: 365.0 MB)
+20/07/20 06:43:47 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:47 WARN BlockManager: Block input-0-1595227427200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:47 INFO BlockGenerator: Pushed block input-0-1595227427200
+20/07/20 06:43:47 INFO MemoryStore: Block input-0-1595227427600 stored as values in memory (estimated size 3.8 KB, free 365.0 MB)
+20/07/20 06:43:47 INFO BlockManagerInfo: Added input-0-1595227427600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.8 KB, free: 365.0 MB)
+20/07/20 06:43:47 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:47 WARN BlockManager: Block input-0-1595227427600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:47 INFO BlockGenerator: Pushed block input-0-1595227427600
+20/07/20 06:43:49 INFO MemoryStore: Block input-0-1595227428800 stored as values in memory (estimated size 9.9 KB, free 365.0 MB)
+20/07/20 06:43:49 INFO BlockManagerInfo: Added input-0-1595227428800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 9.9 KB, free: 365.0 MB)
+20/07/20 06:43:49 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:49 WARN BlockManager: Block input-0-1595227428800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:49 INFO BlockGenerator: Pushed block input-0-1595227428800
+20/07/20 06:43:49 INFO MemoryStore: Block input-0-1595227429000 stored as values in memory (estimated size 4.8 KB, free 365.0 MB)
+20/07/20 06:43:49 INFO BlockManagerInfo: Added input-0-1595227429000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.8 KB, free: 365.0 MB)
+20/07/20 06:43:49 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:49 WARN BlockManager: Block input-0-1595227429000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:49 INFO BlockGenerator: Pushed block input-0-1595227429000
+20/07/20 06:43:49 INFO MemoryStore: Block input-0-1595227429600 stored as values in memory (estimated size 2.9 KB, free 365.0 MB)
+20/07/20 06:43:49 INFO BlockManagerInfo: Added input-0-1595227429600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.0 MB)
+20/07/20 06:43:49 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:49 WARN BlockManager: Block input-0-1595227429600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:49 INFO BlockGenerator: Pushed block input-0-1595227429600
+20/07/20 06:43:50 INFO MemoryStore: Block input-0-1595227430200 stored as values in memory (estimated size 5.9 KB, free 365.0 MB)
+20/07/20 06:43:50 INFO BlockManagerInfo: Added input-0-1595227430200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.9 KB, free: 365.0 MB)
+20/07/20 06:43:50 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:50 WARN BlockManager: Block input-0-1595227430200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:50 INFO BlockGenerator: Pushed block input-0-1595227430200
+20/07/20 06:43:52 INFO MemoryStore: Block input-0-1595227432400 stored as values in memory (estimated size 2.6 KB, free 365.0 MB)
+20/07/20 06:43:52 INFO BlockManagerInfo: Added input-0-1595227432400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.0 MB)
+20/07/20 06:43:52 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:52 WARN BlockManager: Block input-0-1595227432400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:52 INFO BlockGenerator: Pushed block input-0-1595227432400
+20/07/20 06:43:53 INFO MemoryStore: Block input-0-1595227433000 stored as values in memory (estimated size 2.6 KB, free 365.0 MB)
+20/07/20 06:43:53 INFO BlockManagerInfo: Added input-0-1595227433000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 365.0 MB)
+20/07/20 06:43:53 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:53 WARN BlockManager: Block input-0-1595227433000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:53 INFO BlockGenerator: Pushed block input-0-1595227433000
+20/07/20 06:43:53 INFO MemoryStore: Block input-0-1595227433600 stored as values in memory (estimated size 6.9 KB, free 365.0 MB)
+20/07/20 06:43:53 INFO BlockManagerInfo: Added input-0-1595227433600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.9 KB, free: 365.0 MB)
+20/07/20 06:43:53 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:53 WARN BlockManager: Block input-0-1595227433600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:53 INFO BlockGenerator: Pushed block input-0-1595227433600
+20/07/20 06:43:55 INFO MemoryStore: Block input-0-1595227435000 stored as values in memory (estimated size 3.7 KB, free 365.0 MB)
+20/07/20 06:43:55 INFO BlockManagerInfo: Added input-0-1595227435000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.7 KB, free: 365.0 MB)
+20/07/20 06:43:55 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:55 WARN BlockManager: Block input-0-1595227435000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:55 INFO BlockGenerator: Pushed block input-0-1595227435000
+20/07/20 06:43:56 INFO MemoryStore: Block input-0-1595227436000 stored as values in memory (estimated size 4.4 KB, free 365.0 MB)
+20/07/20 06:43:56 INFO BlockManagerInfo: Added input-0-1595227436000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 4.4 KB, free: 365.0 MB)
+20/07/20 06:43:56 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:56 WARN BlockManager: Block input-0-1595227436000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:56 INFO BlockGenerator: Pushed block input-0-1595227436000
+20/07/20 06:43:56 INFO MemoryStore: Block input-0-1595227436400 stored as values in memory (estimated size 2.8 KB, free 365.0 MB)
+20/07/20 06:43:56 INFO BlockManagerInfo: Added input-0-1595227436400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.0 MB)
+20/07/20 06:43:56 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:56 WARN BlockManager: Block input-0-1595227436400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:56 INFO BlockGenerator: Pushed block input-0-1595227436400
+20/07/20 06:43:58 INFO MemoryStore: Block input-0-1595227437800 stored as values in memory (estimated size 3.7 KB, free 364.9 MB)
+20/07/20 06:43:58 INFO BlockManagerInfo: Added input-0-1595227437800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.7 KB, free: 365.0 MB)
+20/07/20 06:43:58 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:58 WARN BlockManager: Block input-0-1595227437800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:58 INFO BlockGenerator: Pushed block input-0-1595227437800
+20/07/20 06:43:58 INFO MemoryStore: Block input-0-1595227438000 stored as values in memory (estimated size 6.2 KB, free 364.9 MB)
+20/07/20 06:43:58 INFO BlockManagerInfo: Added input-0-1595227438000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.2 KB, free: 365.0 MB)
+20/07/20 06:43:58 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:43:58 WARN BlockManager: Block input-0-1595227438000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:43:58 INFO BlockGenerator: Pushed block input-0-1595227438000
+20/07/20 06:44:00 INFO MemoryStore: Block input-0-1595227440600 stored as values in memory (estimated size 2.9 KB, free 364.9 MB)
+20/07/20 06:44:00 INFO BlockManagerInfo: Added input-0-1595227440600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.0 MB)
+20/07/20 06:44:00 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:00 WARN BlockManager: Block input-0-1595227440600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:00 INFO BlockGenerator: Pushed block input-0-1595227440600
+20/07/20 06:44:01 INFO MemoryStore: Block input-0-1595227441200 stored as values in memory (estimated size 7.1 KB, free 364.9 MB)
+20/07/20 06:44:01 INFO BlockManagerInfo: Added input-0-1595227441200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 7.1 KB, free: 365.0 MB)
+20/07/20 06:44:01 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:01 WARN BlockManager: Block input-0-1595227441200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:01 INFO BlockGenerator: Pushed block input-0-1595227441200
+20/07/20 06:44:02 INFO MemoryStore: Block input-0-1595227442200 stored as values in memory (estimated size 2.4 KB, free 364.9 MB)
+20/07/20 06:44:02 INFO BlockManagerInfo: Added input-0-1595227442200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.4 KB, free: 365.0 MB)
+20/07/20 06:44:02 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:02 WARN BlockManager: Block input-0-1595227442200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:02 INFO BlockGenerator: Pushed block input-0-1595227442200
+20/07/20 06:44:02 INFO MemoryStore: Block input-0-1595227442600 stored as values in memory (estimated size 2.9 KB, free 364.9 MB)
+20/07/20 06:44:02 INFO BlockManagerInfo: Added input-0-1595227442600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 365.0 MB)
+20/07/20 06:44:02 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:02 WARN BlockManager: Block input-0-1595227442600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:02 INFO BlockGenerator: Pushed block input-0-1595227442600
+20/07/20 06:44:03 INFO MemoryStore: Block input-0-1595227443000 stored as values in memory (estimated size 5.9 KB, free 364.9 MB)
+20/07/20 06:44:03 INFO BlockManagerInfo: Added input-0-1595227443000 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.9 KB, free: 365.0 MB)
+20/07/20 06:44:03 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:03 WARN BlockManager: Block input-0-1595227443000 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:03 INFO BlockGenerator: Pushed block input-0-1595227443000
+20/07/20 06:44:03 INFO MemoryStore: Block input-0-1595227443600 stored as values in memory (estimated size 3.0 KB, free 364.9 MB)
+20/07/20 06:44:03 INFO BlockManagerInfo: Added input-0-1595227443600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.0 KB, free: 365.0 MB)
+20/07/20 06:44:03 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:03 WARN BlockManager: Block input-0-1595227443600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:03 INFO BlockGenerator: Pushed block input-0-1595227443600
+20/07/20 06:44:04 INFO MemoryStore: Block input-0-1595227444400 stored as values in memory (estimated size 6.6 KB, free 364.9 MB)
+20/07/20 06:44:04 INFO BlockManagerInfo: Added input-0-1595227444400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 6.6 KB, free: 365.0 MB)
+20/07/20 06:44:04 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:04 WARN BlockManager: Block input-0-1595227444400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:04 INFO BlockGenerator: Pushed block input-0-1595227444400
+20/07/20 06:44:04 INFO MemoryStore: Block input-0-1595227444600 stored as values in memory (estimated size 3.6 KB, free 364.9 MB)
+20/07/20 06:44:04 INFO BlockManagerInfo: Added input-0-1595227444600 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.6 KB, free: 365.0 MB)
+20/07/20 06:44:04 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:04 WARN BlockManager: Block input-0-1595227444600 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:04 INFO BlockGenerator: Pushed block input-0-1595227444600
+20/07/20 06:44:05 INFO MemoryStore: Block input-0-1595227445200 stored as values in memory (estimated size 3.6 KB, free 364.9 MB)
+20/07/20 06:44:05 INFO BlockManagerInfo: Added input-0-1595227445200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 3.6 KB, free: 365.0 MB)
+20/07/20 06:44:05 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:05 WARN BlockManager: Block input-0-1595227445200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:05 INFO BlockGenerator: Pushed block input-0-1595227445200
+20/07/20 06:44:06 INFO MemoryStore: Block input-0-1595227445800 stored as values in memory (estimated size 2.8 KB, free 364.9 MB)
+20/07/20 06:44:06 INFO BlockManagerInfo: Added input-0-1595227445800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.8 KB, free: 365.0 MB)
+20/07/20 06:44:06 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:06 WARN BlockManager: Block input-0-1595227445800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:06 INFO BlockGenerator: Pushed block input-0-1595227445800
+20/07/20 06:44:07 INFO MemoryStore: Block input-0-1595227447200 stored as values in memory (estimated size 2.9 KB, free 364.9 MB)
+20/07/20 06:44:07 INFO BlockManagerInfo: Added input-0-1595227447200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.9 KB, free: 364.9 MB)
+20/07/20 06:44:07 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:07 WARN BlockManager: Block input-0-1595227447200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:07 INFO BlockGenerator: Pushed block input-0-1595227447200
+20/07/20 06:44:07 INFO MemoryStore: Block input-0-1595227447400 stored as values in memory (estimated size 2.5 KB, free 364.9 MB)
+20/07/20 06:44:07 INFO BlockManagerInfo: Added input-0-1595227447400 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 364.9 MB)
+20/07/20 06:44:07 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:07 WARN BlockManager: Block input-0-1595227447400 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:07 INFO BlockGenerator: Pushed block input-0-1595227447400
+20/07/20 06:44:08 INFO MemoryStore: Block input-0-1595227448200 stored as values in memory (estimated size 5.3 KB, free 364.9 MB)
+20/07/20 06:44:08 INFO BlockManagerInfo: Added input-0-1595227448200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 5.3 KB, free: 364.9 MB)
+20/07/20 06:44:08 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:08 WARN BlockManager: Block input-0-1595227448200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:08 INFO BlockGenerator: Pushed block input-0-1595227448200
+20/07/20 06:44:09 INFO MemoryStore: Block input-0-1595227448800 stored as values in memory (estimated size 2.6 KB, free 364.9 MB)
+20/07/20 06:44:09 INFO BlockManagerInfo: Added input-0-1595227448800 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.6 KB, free: 364.9 MB)
+20/07/20 06:44:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:09 WARN BlockManager: Block input-0-1595227448800 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:09 INFO BlockGenerator: Pushed block input-0-1595227448800
+20/07/20 06:44:09 INFO MemoryStore: Block input-0-1595227449200 stored as values in memory (estimated size 2.5 KB, free 364.9 MB)
+20/07/20 06:44:09 INFO BlockManagerInfo: Added input-0-1595227449200 in memory on ip-172-31-67-211.ec2.internal:36529 (size: 2.5 KB, free: 364.9 MB)
+20/07/20 06:44:09 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+20/07/20 06:44:09 WARN BlockManager: Block input-0-1595227449200 replicated to only 0 peer(s) instead of 1 peers
+20/07/20 06:44:09 INFO BlockGenerator: Pushed block input-0-1595227449200

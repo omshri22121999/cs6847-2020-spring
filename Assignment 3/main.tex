@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+
+\title{Assignment 3}
+\author{Om Shri Prasath, EE17B113}
+\date{April 2020}
+\begin{document}
+\maketitle
+\section*{Introduction}
+\paragraph{}
+
+The assignment consists of running the Alternating Least Squares (ALS) algorithm and Frequent Pattern Mining (FP Mining) algorithm using the Spark \textbf{mllib} Library on the given set of data.
+
+\section*{ALS Algorithm}
+\paragraph{}
+
+ The data is given as a \textbf{'::'}-split data. It is split into its components and passed to the model, which gives the output and Test-RMSE.
+
+ \paragraph{}
+
+For different regularization parameters and iterations, we found the minimum RMSE for 20 iterations and regularization parameter of 0.1
+For different train-test splits, we found the minimum RMSE for 0.9/0.1 split.
+
+\paragraph{}
+
+The outputs are present in \emph{ALS\_out\_1.txt} and \emph{ALS\_out\_2.txt}.
+
+\section*{FP Growth Algorithm - 1}
+\paragraph{}
+
+The data is already given in a proper format to use. We split the data using \textbf{','}-data.
+
+\paragraph{}
+
+The maximum occuring pairs for a 0.04 \emph{min\_support} is :
+\vspace{0.5em}
+
+\begin{center}
+
+    FreqItemset(items=[u'spaghetti', u'mineral water'], freq=448)\newline
+    FreqItemset(items=[u'chocolate', u'mineral water'], freq=395)\newline
+    FreqItemset(items=[u'eggs', u'mineral water'], freq=382) \newline
+    FreqItemset(items=[u'milk', u'mineral water'], freq=360)\newline
+    FreqItemset(items=[u'ground beef', u'mineral water'], freq=307)\newline
+\end{center}
+
+The output is present in \emph{fp1\_out.txt}.
+
+\section*{FP Growth Algorithm - 2}
+
+The data needs to be prepossessed for use in FP Growth. It is done by grouping the object via their \emph{Invoice Number} after removing NaN or empty rows. After that, it is run through the FP Growth Algorithm. 
+\paragraph{}
+
+The maximum occuring pairs (given as their ID's) for a 0.0236 \emph{min\_support} is :
+\vspace{0.5em}
+
+
+\paragraph{}
+
+\begin{center}
+    FreqItemset(items=[u'22386', u'85099B'], freq=554)\newline
+    FreqItemset(items=[u'22697', u'22699'], freq=557)\newline
+    FreqItemset(items=[u'22726', u'22727'], freq=536)\newline
+    FreqItemset(items=[u'22384', u'20725'], freq=530) \newline
+    FreqItemset(items=[u'22383', u'20725'], freq=526)\newline
+\end{center}
+
+The output is present in \emph{fp2\_out.txt} and the code for cleaning is in \emph{fp\_convert\_data.py}.
+
+\end{document}

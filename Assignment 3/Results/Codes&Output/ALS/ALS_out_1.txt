@@ -1,0 +1,160 @@
+No.of Iterations = 5 & Regularization Parameter = 0.01
+
+Root-mean-square error = 1.90447043908
+
+No.of Iterations = 10 & Regularization Parameter = 0.01
+
+Root-mean-square error = 1.92427616209
+
+No.of Iterations = 15 & Regularization Parameter = 0.01
+
+Root-mean-square error = 1.89365738127
+
+No.of Iterations = 20 & Regularization Parameter = 0.01
+
+Root-mean-square error = 1.82509175382
+
+No.of Iterations = 5 & Regularization Parameter = 0.02
+
+Root-mean-square error = 1.68930485045
+
+No.of Iterations = 10 & Regularization Parameter = 0.02
+
+Root-mean-square error = 1.62597529201
+
+No.of Iterations = 15 & Regularization Parameter = 0.02
+
+Root-mean-square error = 1.510984128
+
+No.of Iterations = 20 & Regularization Parameter = 0.02
+
+Root-mean-square error = 1.42464408607
+
+No.of Iterations = 5 & Regularization Parameter = 0.03
+
+Root-mean-square error = 1.54798191096
+
+No.of Iterations = 10 & Regularization Parameter = 0.03
+
+Root-mean-square error = 1.41209222378
+
+No.of Iterations = 15 & Regularization Parameter = 0.03
+
+Root-mean-square error = 1.29761924218
+
+No.of Iterations = 20 & Regularization Parameter = 0.03
+
+Root-mean-square error = 1.23967135554
+
+No.of Iterations = 5 & Regularization Parameter = 0.04
+
+Root-mean-square error = 1.43527345195
+
+No.of Iterations = 10 & Regularization Parameter = 0.04
+
+Root-mean-square error = 1.29650421038
+
+No.of Iterations = 15 & Regularization Parameter = 0.04
+
+Root-mean-square error = 1.21359965406
+
+No.of Iterations = 20 & Regularization Parameter = 0.04
+
+Root-mean-square error = 1.18000637776
+
+No.of Iterations = 5 & Regularization Parameter = 0.05
+
+Root-mean-square error = 1.3481538701
+
+No.of Iterations = 10 & Regularization Parameter = 0.05
+
+Root-mean-square error = 1.22560473651
+
+No.of Iterations = 15 & Regularization Parameter = 0.05
+
+Root-mean-square error = 1.17568862532
+
+No.of Iterations = 20 & Regularization Parameter = 0.05
+
+Root-mean-square error = 1.15757961864
+
+No.of Iterations = 5 & Regularization Parameter = 0.06
+
+Root-mean-square error = 1.28555631132
+
+No.of Iterations = 10 & Regularization Parameter = 0.06
+
+Root-mean-square error = 1.18290944608
+
+No.of Iterations = 15 & Regularization Parameter = 0.06
+
+Root-mean-square error = 1.14609419726
+
+No.of Iterations = 20 & Regularization Parameter = 0.06
+
+Root-mean-square error = 1.12499127251
+
+No.of Iterations = 5 & Regularization Parameter = 0.07
+
+Root-mean-square error = 1.23985722906
+
+No.of Iterations = 10 & Regularization Parameter = 0.07
+
+Root-mean-square error = 1.14913667177
+
+No.of Iterations = 15 & Regularization Parameter = 0.07
+
+Root-mean-square error = 1.11893392789
+
+No.of Iterations = 20 & Regularization Parameter = 0.07
+
+Root-mean-square error = 1.10273944539
+
+No.of Iterations = 5 & Regularization Parameter = 0.08
+
+Root-mean-square error = 1.20439972762
+
+No.of Iterations = 10 & Regularization Parameter = 0.08
+
+Root-mean-square error = 1.12338129548
+
+No.of Iterations = 15 & Regularization Parameter = 0.08
+
+Root-mean-square error = 1.10180576778
+
+No.of Iterations = 20 & Regularization Parameter = 0.08
+
+Root-mean-square error = 1.09023720461
+
+No.of Iterations = 5 & Regularization Parameter = 0.09
+
+Root-mean-square error = 1.17731214918
+
+No.of Iterations = 10 & Regularization Parameter = 0.09
+
+Root-mean-square error = 1.11042918807
+
+No.of Iterations = 15 & Regularization Parameter = 0.09
+
+Root-mean-square error = 1.09373408849
+
+No.of Iterations = 20 & Regularization Parameter = 0.09
+
+Root-mean-square error = 1.08471976967
+
+No.of Iterations = 5 & Regularization Parameter = 0.1
+
+Root-mean-square error = 1.1578395094
+
+No.of Iterations = 10 & Regularization Parameter = 0.1
+
+Root-mean-square error = 1.10382148297
+
+No.of Iterations = 15 & Regularization Parameter = 0.1
+
+Root-mean-square error = 1.08961877372
+
+No.of Iterations = 20 & Regularization Parameter = 0.1
+
+Root-mean-square error = 1.08233603734
+

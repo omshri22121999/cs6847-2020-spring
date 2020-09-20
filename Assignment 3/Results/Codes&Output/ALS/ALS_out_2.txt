@@ -1,0 +1,20 @@
+Train-Test Split = [0.9 / 0.1]
+
+Root-mean-square error = 0.844620373501
+
+Train-Test Split = [0.85 / 0.15]
+
+Root-mean-square error = 1.00974516425
+
+Train-Test Split = [0.8 / 0.2]
+
+Root-mean-square error = 1.09070742714
+
+Train-Test Split = [0.75 / 0.25]
+
+Root-mean-square error = 0.889730638326
+
+Train-Test Split = [0.7 / 0.3]
+
+Root-mean-square error = 0.997377108338
+

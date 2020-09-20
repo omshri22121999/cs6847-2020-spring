@@ -1,0 +1,1777 @@
+20/04/16 15:18:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/04/16 15:18:07 INFO SparkContext: Running Spark version 2.4.5
+20/04/16 15:18:07 INFO SparkContext: Submitted application: FP1
+20/04/16 15:18:07 INFO SecurityManager: Changing view acls to: omshripc
+20/04/16 15:18:07 INFO SecurityManager: Changing modify acls to: omshripc
+20/04/16 15:18:07 INFO SecurityManager: Changing view acls groups to: 
+20/04/16 15:18:07 INFO SecurityManager: Changing modify acls groups to: 
+20/04/16 15:18:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(omshripc); groups with view permissions: Set(); users  with modify permissions: Set(omshripc); groups with modify permissions: Set()
+20/04/16 15:18:07 INFO Utils: Successfully started service 'sparkDriver' on port 39357.
+20/04/16 15:18:07 INFO SparkEnv: Registering MapOutputTracker
+20/04/16 15:18:07 INFO SparkEnv: Registering BlockManagerMaster
+20/04/16 15:18:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/04/16 15:18:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/04/16 15:18:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7a247766-8482-46e9-8320-7b291cb629c1
+20/04/16 15:18:07 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/04/16 15:18:07 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/16 15:18:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/04/16 15:18:07 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://localhost:4040
+20/04/16 15:18:07 INFO Executor: Starting executor ID driver on host localhost
+20/04/16 15:18:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43505.
+20/04/16 15:18:07 INFO NettyBlockTransferService: Server created on localhost:43505
+20/04/16 15:18:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/04/16 15:18:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, localhost, 43505, None)
+20/04/16 15:18:07 INFO BlockManagerMasterEndpoint: Registering block manager localhost:43505 with 366.3 MB RAM, BlockManagerId(driver, localhost, 43505, None)
+20/04/16 15:18:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 43505, None)
+20/04/16 15:18:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 43505, None)
+20/04/16 15:18:08 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 236.7 KB, free 366.1 MB)
+20/04/16 15:18:08 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.9 KB, free 366.0 MB)
+20/04/16 15:18:08 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:43505 (size: 22.9 KB, free: 366.3 MB)
+20/04/16 15:18:08 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+20/04/16 15:18:08 INFO FileInputFormat: Total input paths to process : 1
+20/04/16 15:18:08 INFO SparkContext: Starting job: collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8
+20/04/16 15:18:08 INFO DAGScheduler: Got job 0 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8) with 1 output partitions
+20/04/16 15:18:08 INFO DAGScheduler: Final stage: ResultStage 0 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8)
+20/04/16 15:18:08 INFO DAGScheduler: Parents of final stage: List()
+20/04/16 15:18:08 INFO DAGScheduler: Missing parents: List()
+20/04/16 15:18:08 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[2] at collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8), which has no missing parents
+20/04/16 15:18:08 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.1 KB, free 366.0 MB)
+20/04/16 15:18:08 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.8 KB, free 366.0 MB)
+20/04/16 15:18:08 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:43505 (size: 3.8 KB, free: 366.3 MB)
+20/04/16 15:18:08 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (PythonRDD[2] at collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:08 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/04/16 15:18:08 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7920 bytes)
+20/04/16 15:18:08 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/04/16 15:18:08 INFO HadoopRDD: Input split: file:/usr/local/spark-2.4.5-bin-hadoop2.7/data/FP_Part-1.csv:0+302908
+20/04/16 15:18:09 INFO PythonRunner: Times: total = 424, boot = 333, init = 21, finish = 70
+20/04/16 15:18:09 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 620926 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 541 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/04/16 15:18:09 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 43911
+20/04/16 15:18:09 INFO DAGScheduler: ResultStage 0 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8) finished in 0.596 s
+20/04/16 15:18:09 INFO DAGScheduler: Job 0 finished: collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:8, took 0.640362 s
+20/04/16 15:18:09 WARN FPGrowth: Input data is not cached.
+20/04/16 15:18:09 INFO SparkContext: Starting job: count at FPGrowth.scala:217
+20/04/16 15:18:09 INFO DAGScheduler: Got job 1 (count at FPGrowth.scala:217) with 1 output partitions
+20/04/16 15:18:09 INFO DAGScheduler: Final stage: ResultStage 1 (count at FPGrowth.scala:217)
+20/04/16 15:18:09 INFO DAGScheduler: Parents of final stage: List()
+20/04/16 15:18:09 INFO DAGScheduler: Missing parents: List()
+20/04/16 15:18:09 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[4] at map at PythonMLLibAPI.scala:576), which has no missing parents
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.9 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.2 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:43505 (size: 4.2 KB, free: 366.3 MB)
+20/04/16 15:18:09 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:09 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[4] at map at PythonMLLibAPI.scala:576) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 7920 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+20/04/16 15:18:09 INFO HadoopRDD: Input split: file:/usr/local/spark-2.4.5-bin-hadoop2.7/data/FP_Part-1.csv:0+302908
+20/04/16 15:18:09 INFO PythonRunner: Times: total = 89, boot = -146, init = 151, finish = 84
+20/04/16 15:18:09 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1569 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 105 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/04/16 15:18:09 INFO DAGScheduler: ResultStage 1 (count at FPGrowth.scala:217) finished in 0.121 s
+20/04/16 15:18:09 INFO DAGScheduler: Job 1 finished: count at FPGrowth.scala:217, took 0.124371 s
+20/04/16 15:18:09 INFO SparkContext: Starting job: collect at FPGrowth.scala:257
+20/04/16 15:18:09 INFO DAGScheduler: Registering RDD 6 (map at FPGrowth.scala:254) as input to shuffle 0
+20/04/16 15:18:09 INFO DAGScheduler: Got job 2 (collect at FPGrowth.scala:257) with 20 output partitions
+20/04/16 15:18:09 INFO DAGScheduler: Final stage: ResultStage 3 (collect at FPGrowth.scala:257)
+20/04/16 15:18:09 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+20/04/16 15:18:09 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+20/04/16 15:18:09 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[6] at map at FPGrowth.scala:254), which has no missing parents
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 8.2 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.9 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:43505 (size: 4.9 KB, free: 366.3 MB)
+20/04/16 15:18:09 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 6
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 25
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 39
+20/04/16 15:18:09 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[6] at map at FPGrowth.scala:254) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 7909 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+20/04/16 15:18:09 INFO HadoopRDD: Input split: file:/usr/local/spark-2.4.5-bin-hadoop2.7/data/FP_Part-1.csv:0+302908
+20/04/16 15:18:09 INFO BlockManagerInfo: Removed broadcast_1_piece0 on localhost:43505 in memory (size: 3.8 KB, free: 366.3 MB)
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 46
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 19
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 44
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 4
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 31
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 12
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 26
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 3
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 33
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 21
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 49
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 10
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 45
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 50
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 47
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 2
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 43
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 32
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 34
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 28
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 41
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 23
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 16
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 1
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 13
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 15
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 48
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 18
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 35
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 24
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 38
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 42
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 20
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 36
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 27
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 9
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 17
+20/04/16 15:18:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:43505 in memory (size: 4.2 KB, free: 366.3 MB)
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 5
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 11
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 8
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 30
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 14
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 37
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 40
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 22
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 29
+20/04/16 15:18:09 INFO ContextCleaner: Cleaned accumulator 7
+20/04/16 15:18:09 INFO PythonRunner: Times: total = 76, boot = -81, init = 86, finish = 71
+20/04/16 15:18:09 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1777 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 261 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+20/04/16 15:18:09 INFO DAGScheduler: ShuffleMapStage 2 (map at FPGrowth.scala:254) finished in 0.282 s
+20/04/16 15:18:09 INFO DAGScheduler: looking for newly runnable stages
+20/04/16 15:18:09 INFO DAGScheduler: running: Set()
+20/04/16 15:18:09 INFO DAGScheduler: waiting: Set(ResultStage 3)
+20/04/16 15:18:09 INFO DAGScheduler: failed: Set()
+20/04/16 15:18:09 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[8] at filter at FPGrowth.scala:256), which has no missing parents
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.8 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.2 KB, free 366.0 MB)
+20/04/16 15:18:09 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:43505 (size: 2.2 KB, free: 366.3 MB)
+20/04/16 15:18:09 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:09 INFO DAGScheduler: Submitting 20 missing tasks from ResultStage 3 (MapPartitionsRDD[8] at filter at FPGrowth.scala:256) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/16 15:18:09 INFO TaskSchedulerImpl: Adding task set 3.0 with 20 tasks
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+20/04/16 15:18:09 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1134 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 4, localhost, executor driver, partition 1, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 1.0 in stage 3.0 (TID 4)
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 44 ms on localhost (executor driver) (1/20)
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:09 INFO Executor: Finished task 1.0 in stage 3.0 (TID 4). 1134 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 5, localhost, executor driver, partition 2, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 2.0 in stage 3.0 (TID 5)
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 4) in 8 ms on localhost (executor driver) (2/20)
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:09 INFO Executor: Finished task 2.0 in stage 3.0 (TID 5). 1318 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 6, localhost, executor driver, partition 3, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 3.0 in stage 3.0 (TID 6)
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 5) in 10 ms on localhost (executor driver) (3/20)
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:09 INFO Executor: Finished task 3.0 in stage 3.0 (TID 6). 1316 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 7, localhost, executor driver, partition 4, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 4.0 in stage 3.0 (TID 7)
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 6) in 7 ms on localhost (executor driver) (4/20)
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:09 INFO Executor: Finished task 4.0 in stage 3.0 (TID 7). 1315 bytes result sent to driver
+20/04/16 15:18:09 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 8, localhost, executor driver, partition 5, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:09 INFO Executor: Running task 5.0 in stage 3.0 (TID 8)
+20/04/16 15:18:09 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 7) in 9 ms on localhost (executor driver) (5/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 5.0 in stage 3.0 (TID 8). 1294 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 9, localhost, executor driver, partition 6, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 6.0 in stage 3.0 (TID 9)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 8) in 8 ms on localhost (executor driver) (6/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 6.0 in stage 3.0 (TID 9). 1366 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 10, localhost, executor driver, partition 7, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 7.0 in stage 3.0 (TID 10)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 9) in 10 ms on localhost (executor driver) (7/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 7.0 in stage 3.0 (TID 10). 1285 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 8.0 in stage 3.0 (TID 11, localhost, executor driver, partition 8, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 8.0 in stage 3.0 (TID 11)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 10) in 7 ms on localhost (executor driver) (8/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 8.0 in stage 3.0 (TID 11). 1288 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 9.0 in stage 3.0 (TID 12, localhost, executor driver, partition 9, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 9.0 in stage 3.0 (TID 12)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 8.0 in stage 3.0 (TID 11) in 6 ms on localhost (executor driver) (9/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 9.0 in stage 3.0 (TID 12). 1400 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 10.0 in stage 3.0 (TID 13, localhost, executor driver, partition 10, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 10.0 in stage 3.0 (TID 13)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 9.0 in stage 3.0 (TID 12) in 5 ms on localhost (executor driver) (10/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 10.0 in stage 3.0 (TID 13). 1317 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 11.0 in stage 3.0 (TID 14, localhost, executor driver, partition 11, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 11.0 in stage 3.0 (TID 14)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 10.0 in stage 3.0 (TID 13) in 7 ms on localhost (executor driver) (11/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 11.0 in stage 3.0 (TID 14). 1253 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 12.0 in stage 3.0 (TID 15, localhost, executor driver, partition 12, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 12.0 in stage 3.0 (TID 15)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 11.0 in stage 3.0 (TID 14) in 4 ms on localhost (executor driver) (12/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 12.0 in stage 3.0 (TID 15). 1323 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 13.0 in stage 3.0 (TID 16, localhost, executor driver, partition 13, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 13.0 in stage 3.0 (TID 16)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 12.0 in stage 3.0 (TID 15) in 6 ms on localhost (executor driver) (13/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 13.0 in stage 3.0 (TID 16). 1327 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 14.0 in stage 3.0 (TID 17, localhost, executor driver, partition 14, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 14.0 in stage 3.0 (TID 17)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 13.0 in stage 3.0 (TID 16) in 5 ms on localhost (executor driver) (14/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:10 INFO Executor: Finished task 14.0 in stage 3.0 (TID 17). 1286 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 15.0 in stage 3.0 (TID 18, localhost, executor driver, partition 15, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 15.0 in stage 3.0 (TID 18)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 14.0 in stage 3.0 (TID 17) in 5 ms on localhost (executor driver) (15/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:10 INFO Executor: Finished task 15.0 in stage 3.0 (TID 18). 1355 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 16.0 in stage 3.0 (TID 19, localhost, executor driver, partition 16, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 16.0 in stage 3.0 (TID 19)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 15.0 in stage 3.0 (TID 18) in 5 ms on localhost (executor driver) (16/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 16.0 in stage 3.0 (TID 19). 1289 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 17.0 in stage 3.0 (TID 20, localhost, executor driver, partition 17, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 17.0 in stage 3.0 (TID 20)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 16.0 in stage 3.0 (TID 19) in 5 ms on localhost (executor driver) (17/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 17.0 in stage 3.0 (TID 20). 1289 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 18.0 in stage 3.0 (TID 21, localhost, executor driver, partition 18, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 18.0 in stage 3.0 (TID 21)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 17.0 in stage 3.0 (TID 20) in 6 ms on localhost (executor driver) (18/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:10 INFO Executor: Finished task 18.0 in stage 3.0 (TID 21). 1252 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 19.0 in stage 3.0 (TID 22, localhost, executor driver, partition 19, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 19.0 in stage 3.0 (TID 22)
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 18.0 in stage 3.0 (TID 21) in 5 ms on localhost (executor driver) (19/20)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:10 INFO Executor: Finished task 19.0 in stage 3.0 (TID 22). 1284 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 19.0 in stage 3.0 (TID 22) in 5 ms on localhost (executor driver) (20/20)
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+20/04/16 15:18:10 INFO DAGScheduler: ResultStage 3 (collect at FPGrowth.scala:257) finished in 0.165 s
+20/04/16 15:18:10 INFO DAGScheduler: Job 2 finished: collect at FPGrowth.scala:257, took 0.471395 s
+20/04/16 15:18:10 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/04/16 15:18:10 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/04/16 15:18:10 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:10 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
+20/04/16 15:18:10 INFO DAGScheduler: Got job 3 (runJob at SparkHadoopWriter.scala:78) with 1 output partitions
+20/04/16 15:18:10 INFO DAGScheduler: Final stage: ResultStage 4 (runJob at SparkHadoopWriter.scala:78)
+20/04/16 15:18:10 INFO DAGScheduler: Parents of final stage: List()
+20/04/16 15:18:10 INFO DAGScheduler: Missing parents: List()
+20/04/16 15:18:10 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[14] at saveAsTextFile at FPGrowth.scala:111), which has no missing parents
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 70.8 KB, free 366.0 MB)
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 25.1 KB, free 365.9 MB)
+20/04/16 15:18:10 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:43505 (size: 25.1 KB, free: 366.2 MB)
+20/04/16 15:18:10 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:10 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[14] at saveAsTextFile at FPGrowth.scala:111) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 23, localhost, executor driver, partition 0, PROCESS_LOCAL, 7939 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 0.0 in stage 4.0 (TID 23)
+20/04/16 15:18:10 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/04/16 15:18:10 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:10 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151810_0014_m_000000_0' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/metadata/_temporary/0/task_20200416151810_0014_m_000000
+20/04/16 15:18:10 INFO SparkHadoopMapRedUtil: attempt_20200416151810_0014_m_000000_0: Committed
+20/04/16 15:18:10 INFO Executor: Finished task 0.0 in stage 4.0 (TID 23). 1072 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 23) in 66 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+20/04/16 15:18:10 INFO DAGScheduler: ResultStage 4 (runJob at SparkHadoopWriter.scala:78) finished in 0.083 s
+20/04/16 15:18:10 INFO DAGScheduler: Job 3 finished: runJob at SparkHadoopWriter.scala:78, took 0.086465 s
+20/04/16 15:18:10 INFO SparkHadoopWriter: Job job_20200416151810_0014 committed.
+20/04/16 15:18:10 INFO SparkContext: Starting job: first at FPGrowth.scala:114
+20/04/16 15:18:10 INFO DAGScheduler: Registering RDD 9 (flatMap at FPGrowth.scala:275) as input to shuffle 1
+20/04/16 15:18:10 INFO DAGScheduler: Got job 4 (first at FPGrowth.scala:114) with 1 output partitions
+20/04/16 15:18:10 INFO DAGScheduler: Final stage: ResultStage 6 (first at FPGrowth.scala:114)
+20/04/16 15:18:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+20/04/16 15:18:10 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 5)
+20/04/16 15:18:10 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[9] at flatMap at FPGrowth.scala:275), which has no missing parents
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 11.1 KB, free 365.9 MB)
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 6.1 KB, free 365.9 MB)
+20/04/16 15:18:10 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:43505 (size: 6.1 KB, free: 366.2 MB)
+20/04/16 15:18:10 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:10 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[9] at flatMap at FPGrowth.scala:275) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 24, localhost, executor driver, partition 0, PROCESS_LOCAL, 7909 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 0.0 in stage 5.0 (TID 24)
+20/04/16 15:18:10 INFO HadoopRDD: Input split: file:/usr/local/spark-2.4.5-bin-hadoop2.7/data/FP_Part-1.csv:0+302908
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 108
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 120
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 77
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 102
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 53
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 59
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 104
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 117
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 86
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 71
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 75
+20/04/16 15:18:10 INFO BlockManagerInfo: Removed broadcast_4_piece0 on localhost:43505 in memory (size: 2.2 KB, free: 366.2 MB)
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 96
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 74
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 79
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 97
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 114
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 73
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 51
+20/04/16 15:18:10 INFO BlockManagerInfo: Removed broadcast_5_piece0 on localhost:43505 in memory (size: 25.1 KB, free: 366.3 MB)
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 109
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 67
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 54
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 107
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 95
+20/04/16 15:18:10 INFO BlockManagerInfo: Removed broadcast_3_piece0 on localhost:43505 in memory (size: 4.9 KB, free: 366.3 MB)
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 68
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 83
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 58
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 81
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 69
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 78
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 118
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 119
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 123
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 124
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 98
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 56
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 93
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 100
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 64
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 89
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 121
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 94
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 65
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 88
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 115
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 55
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 85
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 99
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 62
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 70
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 113
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 80
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 103
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 91
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 125
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 63
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 90
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 112
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 61
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 92
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 116
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 66
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 57
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 60
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 87
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 101
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 106
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 72
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 110
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 122
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 82
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 105
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned shuffle 0
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 111
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 52
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 76
+20/04/16 15:18:10 INFO ContextCleaner: Cleaned accumulator 84
+20/04/16 15:18:10 INFO PythonRunner: Times: total = 95, boot = -603, init = 606, finish = 92
+20/04/16 15:18:10 INFO Executor: Finished task 0.0 in stage 5.0 (TID 24). 1777 bytes result sent to driver
+20/04/16 15:18:10 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 24) in 640 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+20/04/16 15:18:10 INFO DAGScheduler: ShuffleMapStage 5 (flatMap at FPGrowth.scala:275) finished in 0.651 s
+20/04/16 15:18:10 INFO DAGScheduler: looking for newly runnable stages
+20/04/16 15:18:10 INFO DAGScheduler: running: Set()
+20/04/16 15:18:10 INFO DAGScheduler: waiting: Set(ResultStage 6)
+20/04/16 15:18:10 INFO DAGScheduler: failed: Set()
+20/04/16 15:18:10 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[12] at map at FPGrowth.scala:282), which has no missing parents
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 12.5 KB, free 366.0 MB)
+20/04/16 15:18:10 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/04/16 15:18:10 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:43505 (size: 6.7 KB, free: 366.3 MB)
+20/04/16 15:18:10 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:10 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[12] at map at FPGrowth.scala:282) (first 15 tasks are for partitions Vector(0))
+20/04/16 15:18:10 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks
+20/04/16 15:18:10 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 25, localhost, executor driver, partition 0, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:10 INFO Executor: Running task 0.0 in stage 6.0 (TID 25)
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:11 INFO Executor: Finished task 0.0 in stage 6.0 (TID 25). 1935 bytes result sent to driver
+20/04/16 15:18:11 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 25) in 27 ms on localhost (executor driver) (1/1)
+20/04/16 15:18:11 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+20/04/16 15:18:11 INFO DAGScheduler: ResultStage 6 (first at FPGrowth.scala:114) finished in 0.036 s
+20/04/16 15:18:11 INFO DAGScheduler: Job 4 finished: first at FPGrowth.scala:114, took 0.693348 s
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 165
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 166
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 154
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 151
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 168
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 157
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 170
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 175
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 152
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 174
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 155
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 169
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 172
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 171
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 162
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 153
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 156
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 167
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 158
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 160
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 159
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 164
+20/04/16 15:18:12 INFO BlockManagerInfo: Removed broadcast_7_piece0 on localhost:43505 in memory (size: 6.7 KB, free: 366.3 MB)
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 163
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 173
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 161
+20/04/16 15:18:12 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/usr/local/spark-2.4.5-bin-hadoop2.7/spark-warehouse').
+20/04/16 15:18:12 INFO SharedState: Warehouse path is 'file:/usr/local/spark-2.4.5-bin-hadoop2.7/spark-warehouse'.
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 142
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 137
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 145
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 136
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 138
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 131
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 126
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 129
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 134
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 133
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 128
+20/04/16 15:18:12 INFO BlockManagerInfo: Removed broadcast_6_piece0 on localhost:43505 in memory (size: 6.1 KB, free: 366.3 MB)
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 148
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 147
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 140
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 132
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 130
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 143
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 139
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 135
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 141
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 150
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 149
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 127
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 144
+20/04/16 15:18:12 INFO ContextCleaner: Cleaned accumulator 146
+20/04/16 15:18:12 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/04/16 15:18:13 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO SparkContext: Starting job: parquet at FPGrowth.scala:126
+20/04/16 15:18:13 INFO DAGScheduler: Got job 5 (parquet at FPGrowth.scala:126) with 20 output partitions
+20/04/16 15:18:13 INFO DAGScheduler: Final stage: ResultStage 8 (parquet at FPGrowth.scala:126)
+20/04/16 15:18:13 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+20/04/16 15:18:13 INFO DAGScheduler: Missing parents: List()
+20/04/16 15:18:13 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[17] at parquet at FPGrowth.scala:126), which has no missing parents
+20/04/16 15:18:13 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 158.6 KB, free 365.9 MB)
+20/04/16 15:18:13 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 58.4 KB, free 365.8 MB)
+20/04/16 15:18:13 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:43505 (size: 58.4 KB, free: 366.2 MB)
+20/04/16 15:18:13 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:13 INFO DAGScheduler: Submitting 20 missing tasks from ResultStage 8 (MapPartitionsRDD[17] at parquet at FPGrowth.scala:126) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/16 15:18:13 INFO TaskSchedulerImpl: Adding task set 8.0 with 20 tasks
+20/04/16 15:18:13 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 26, localhost, executor driver, partition 0, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:13 INFO Executor: Running task 0.0 in stage 8.0 (TID 26)
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:13 INFO CodeGenerator: Code generated in 185.596164 ms
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:13 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:13 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:13 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:13 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:13 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:13 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:13 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:13 INFO CodecPool: Got brand-new compressor [.snappy]
+20/04/16 15:18:13 INFO CodeGenerator: Code generated in 56.514489 ms
+20/04/16 15:18:13 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 60
+20/04/16 15:18:13 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000000_26' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000000
+20/04/16 15:18:13 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000000_26: Committed
+20/04/16 15:18:13 INFO Executor: Finished task 0.0 in stage 8.0 (TID 26). 3071 bytes result sent to driver
+20/04/16 15:18:13 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 27, localhost, executor driver, partition 1, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:13 INFO Executor: Running task 1.0 in stage 8.0 (TID 27)
+20/04/16 15:18:13 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 26) in 739 ms on localhost (executor driver) (1/20)
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:13 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:13 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:13 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:13 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:13 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:13 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:13 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:13 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 97
+20/04/16 15:18:13 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000001_27' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000001
+20/04/16 15:18:13 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000001_27: Committed
+20/04/16 15:18:13 INFO Executor: Finished task 1.0 in stage 8.0 (TID 27). 2985 bytes result sent to driver
+20/04/16 15:18:13 INFO TaskSetManager: Starting task 2.0 in stage 8.0 (TID 28, localhost, executor driver, partition 2, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:13 INFO Executor: Running task 2.0 in stage 8.0 (TID 28)
+20/04/16 15:18:13 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 27) in 66 ms on localhost (executor driver) (2/20)
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:13 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:13 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:13 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:13 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:13 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:13 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:13 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:13 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 99
+20/04/16 15:18:13 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000002_28' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000002
+20/04/16 15:18:13 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000002_28: Committed
+20/04/16 15:18:13 INFO Executor: Finished task 2.0 in stage 8.0 (TID 28). 2985 bytes result sent to driver
+20/04/16 15:18:13 INFO TaskSetManager: Starting task 3.0 in stage 8.0 (TID 29, localhost, executor driver, partition 3, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:13 INFO Executor: Running task 3.0 in stage 8.0 (TID 29)
+20/04/16 15:18:13 INFO TaskSetManager: Finished task 2.0 in stage 8.0 (TID 28) in 50 ms on localhost (executor driver) (3/20)
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:13 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:13 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:13 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:13 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:13 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:13 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:13 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:13 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:13 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 63
+20/04/16 15:18:13 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000003_29' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000003
+20/04/16 15:18:13 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000003_29: Committed
+20/04/16 15:18:13 INFO Executor: Finished task 3.0 in stage 8.0 (TID 29). 2985 bytes result sent to driver
+20/04/16 15:18:13 INFO TaskSetManager: Starting task 4.0 in stage 8.0 (TID 30, localhost, executor driver, partition 4, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:13 INFO Executor: Running task 4.0 in stage 8.0 (TID 30)
+20/04/16 15:18:13 INFO TaskSetManager: Finished task 3.0 in stage 8.0 (TID 29) in 44 ms on localhost (executor driver) (4/20)
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:13 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:13 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 90
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000004_30' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000004
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000004_30: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 4.0 in stage 8.0 (TID 30). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 5.0 in stage 8.0 (TID 31, localhost, executor driver, partition 5, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 5.0 in stage 8.0 (TID 31)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 4.0 in stage 8.0 (TID 30) in 51 ms on localhost (executor driver) (5/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 62
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000005_31' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000005
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000005_31: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 5.0 in stage 8.0 (TID 31). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 6.0 in stage 8.0 (TID 32, localhost, executor driver, partition 6, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 6.0 in stage 8.0 (TID 32)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 5.0 in stage 8.0 (TID 31) in 46 ms on localhost (executor driver) (6/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 86
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000006_32' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000006
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000006_32: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 6.0 in stage 8.0 (TID 32). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 7.0 in stage 8.0 (TID 33, localhost, executor driver, partition 7, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 7.0 in stage 8.0 (TID 33)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 6.0 in stage 8.0 (TID 32) in 42 ms on localhost (executor driver) (7/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 97
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000007_33' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000007
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000007_33: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 7.0 in stage 8.0 (TID 33). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 8.0 in stage 8.0 (TID 34, localhost, executor driver, partition 8, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 8.0 in stage 8.0 (TID 34)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 7.0 in stage 8.0 (TID 33) in 37 ms on localhost (executor driver) (8/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 68
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000008_34' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000008
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000008_34: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 8.0 in stage 8.0 (TID 34). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 9.0 in stage 8.0 (TID 35, localhost, executor driver, partition 9, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 8.0 in stage 8.0 (TID 34) in 39 ms on localhost (executor driver) (9/20)
+20/04/16 15:18:14 INFO Executor: Running task 9.0 in stage 8.0 (TID 35)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 54
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000009_35' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000009
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000009_35: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 9.0 in stage 8.0 (TID 35). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 10.0 in stage 8.0 (TID 36, localhost, executor driver, partition 10, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 10.0 in stage 8.0 (TID 36)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 9.0 in stage 8.0 (TID 35) in 42 ms on localhost (executor driver) (10/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 27
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000010_36' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000010
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000010_36: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 10.0 in stage 8.0 (TID 36). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 11.0 in stage 8.0 (TID 37, localhost, executor driver, partition 11, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 11.0 in stage 8.0 (TID 37)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 10.0 in stage 8.0 (TID 36) in 35 ms on localhost (executor driver) (11/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 24
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000011_37' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000011
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000011_37: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 11.0 in stage 8.0 (TID 37). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 12.0 in stage 8.0 (TID 38, localhost, executor driver, partition 12, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 12.0 in stage 8.0 (TID 38)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 11.0 in stage 8.0 (TID 37) in 28 ms on localhost (executor driver) (12/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 27
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000012_38' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000012
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000012_38: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 12.0 in stage 8.0 (TID 38). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 13.0 in stage 8.0 (TID 39, localhost, executor driver, partition 13, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 13.0 in stage 8.0 (TID 39)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 12.0 in stage 8.0 (TID 38) in 23 ms on localhost (executor driver) (13/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 28
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000013_39' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000013
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000013_39: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 13.0 in stage 8.0 (TID 39). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 14.0 in stage 8.0 (TID 40, localhost, executor driver, partition 14, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 14.0 in stage 8.0 (TID 40)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 13.0 in stage 8.0 (TID 39) in 23 ms on localhost (executor driver) (14/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 34
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000014_40' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000014
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000014_40: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 14.0 in stage 8.0 (TID 40). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 15.0 in stage 8.0 (TID 41, localhost, executor driver, partition 15, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 15.0 in stage 8.0 (TID 41)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 14.0 in stage 8.0 (TID 40) in 25 ms on localhost (executor driver) (15/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 26
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000015_41' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000015
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000015_41: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 15.0 in stage 8.0 (TID 41). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 16.0 in stage 8.0 (TID 42, localhost, executor driver, partition 16, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 16.0 in stage 8.0 (TID 42)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 15.0 in stage 8.0 (TID 41) in 38 ms on localhost (executor driver) (16/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 28
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000016_42' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000016
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000016_42: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 16.0 in stage 8.0 (TID 42). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 17.0 in stage 8.0 (TID 43, localhost, executor driver, partition 17, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 17.0 in stage 8.0 (TID 43)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 16.0 in stage 8.0 (TID 42) in 40 ms on localhost (executor driver) (17/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 29
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000017_43' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000017
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000017_43: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 17.0 in stage 8.0 (TID 43). 3028 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 18.0 in stage 8.0 (TID 44, localhost, executor driver, partition 18, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 18.0 in stage 8.0 (TID 44)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 17.0 in stage 8.0 (TID 43) in 35 ms on localhost (executor driver) (18/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 35
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000018_44' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000018
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000018_44: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 18.0 in stage 8.0 (TID 44). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 19.0 in stage 8.0 (TID 45, localhost, executor driver, partition 19, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 19.0 in stage 8.0 (TID 45)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 18.0 in stage 8.0 (TID 44) in 30 ms on localhost (executor driver) (19/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/04/16 15:18:14 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO CodecConfig: Compression: SNAPPY
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/04/16 15:18:14 INFO ParquetOutputFormat: Dictionary is on
+20/04/16 15:18:14 INFO ParquetOutputFormat: Validation is off
+20/04/16 15:18:14 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/04/16 15:18:14 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/04/16 15:18:14 INFO ParquetOutputFormat: Page size checking is: estimated
+20/04/16 15:18:14 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/04/16 15:18:14 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/04/16 15:18:14 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "items",
+    "type" : {
+      "type" : "array",
+      "elementType" : "string",
+      "containsNull" : true
+    },
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "freq",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional group items (LIST) {
+    repeated group list {
+      optional binary element (UTF8);
+    }
+  }
+  optional int64 freq;
+}
+
+       
+20/04/16 15:18:14 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 26
+20/04/16 15:18:14 INFO FileOutputCommitter: Saved output of task 'attempt_20200416151813_0008_m_000019_45' to file:/usr/local/spark-2.4.5-bin-hadoop2.7/target/tmp/fp1/data/_temporary/0/task_20200416151813_0008_m_000019
+20/04/16 15:18:14 INFO SparkHadoopMapRedUtil: attempt_20200416151813_0008_m_000019_45: Committed
+20/04/16 15:18:14 INFO Executor: Finished task 19.0 in stage 8.0 (TID 45). 2985 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 19.0 in stage 8.0 (TID 45) in 35 ms on localhost (executor driver) (20/20)
+20/04/16 15:18:14 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+20/04/16 15:18:14 INFO DAGScheduler: ResultStage 8 (parquet at FPGrowth.scala:126) finished in 1.477 s
+20/04/16 15:18:14 INFO DAGScheduler: Job 5 finished: parquet at FPGrowth.scala:126, took 1.482955 s
+20/04/16 15:18:14 INFO FileFormatWriter: Write Job c3f3e972-810a-44ff-88eb-9fa3d9ccc166 committed.
+20/04/16 15:18:14 INFO FileFormatWriter: Finished processing stats for write job c3f3e972-810a-44ff-88eb-9fa3d9ccc166.
+20/04/16 15:18:14 INFO SparkContext: Starting job: collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15
+20/04/16 15:18:14 INFO DAGScheduler: Got job 6 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15) with 20 output partitions
+20/04/16 15:18:14 INFO DAGScheduler: Final stage: ResultStage 10 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15)
+20/04/16 15:18:14 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+20/04/16 15:18:14 INFO DAGScheduler: Missing parents: List()
+20/04/16 15:18:14 INFO DAGScheduler: Submitting ResultStage 10 (PythonRDD[23] at collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15), which has no missing parents
+20/04/16 15:18:14 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 14.1 KB, free 365.8 MB)
+20/04/16 15:18:14 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.2 KB, free 365.8 MB)
+20/04/16 15:18:14 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:43505 (size: 7.2 KB, free: 366.2 MB)
+20/04/16 15:18:14 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1163
+20/04/16 15:18:14 INFO DAGScheduler: Submitting 20 missing tasks from ResultStage 10 (PythonRDD[23] at collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/04/16 15:18:14 INFO TaskSchedulerImpl: Adding task set 10.0 with 20 tasks
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 46, localhost, executor driver, partition 0, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 0.0 in stage 10.0 (TID 46)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 167, boot = -4154, init = 4321, finish = 0
+20/04/16 15:18:14 INFO Executor: Finished task 0.0 in stage 10.0 (TID 46). 1972 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 47, localhost, executor driver, partition 1, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 1.0 in stage 10.0 (TID 47)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 46) in 178 ms on localhost (executor driver) (1/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 5, boot = 5, init = 0, finish = 0
+20/04/16 15:18:14 INFO Executor: Finished task 1.0 in stage 10.0 (TID 47). 2023 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 48, localhost, executor driver, partition 2, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 2.0 in stage 10.0 (TID 48)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 47) in 15 ms on localhost (executor driver) (2/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 41, boot = 4, init = 37, finish = 0
+20/04/16 15:18:14 INFO Executor: Finished task 2.0 in stage 10.0 (TID 48). 2030 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 3.0 in stage 10.0 (TID 49, localhost, executor driver, partition 3, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 48) in 49 ms on localhost (executor driver) (3/20)
+20/04/16 15:18:14 INFO Executor: Running task 3.0 in stage 10.0 (TID 49)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 44, boot = 1, init = 43, finish = 0
+20/04/16 15:18:14 INFO Executor: Finished task 3.0 in stage 10.0 (TID 49). 1975 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 4.0 in stage 10.0 (TID 50, localhost, executor driver, partition 4, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO Executor: Running task 4.0 in stage 10.0 (TID 50)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 3.0 in stage 10.0 (TID 49) in 57 ms on localhost (executor driver) (4/20)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 42, boot = 3, init = 39, finish = 0
+20/04/16 15:18:14 INFO Executor: Finished task 4.0 in stage 10.0 (TID 50). 2021 bytes result sent to driver
+20/04/16 15:18:14 INFO TaskSetManager: Starting task 5.0 in stage 10.0 (TID 51, localhost, executor driver, partition 5, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:14 INFO TaskSetManager: Finished task 4.0 in stage 10.0 (TID 50) in 53 ms on localhost (executor driver) (5/20)
+20/04/16 15:18:14 INFO Executor: Running task 5.0 in stage 10.0 (TID 51)
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:14 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:14 INFO PythonRunner: Times: total = 44, boot = 2, init = 42, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 5.0 in stage 10.0 (TID 51). 1974 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 6.0 in stage 10.0 (TID 52, localhost, executor driver, partition 6, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 5.0 in stage 10.0 (TID 51) in 53 ms on localhost (executor driver) (6/20)
+20/04/16 15:18:15 INFO Executor: Running task 6.0 in stage 10.0 (TID 52)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 42, boot = 4, init = 38, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 6.0 in stage 10.0 (TID 52). 2003 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 7.0 in stage 10.0 (TID 53, localhost, executor driver, partition 7, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 7.0 in stage 10.0 (TID 53)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 6.0 in stage 10.0 (TID 52) in 53 ms on localhost (executor driver) (7/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 44, boot = 4, init = 40, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 7.0 in stage 10.0 (TID 53). 2030 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 8.0 in stage 10.0 (TID 54, localhost, executor driver, partition 8, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 8.0 in stage 10.0 (TID 54)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 7.0 in stage 10.0 (TID 53) in 53 ms on localhost (executor driver) (8/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 61, boot = 3, init = 58, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 8.0 in stage 10.0 (TID 54). 2023 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 9.0 in stage 10.0 (TID 55, localhost, executor driver, partition 9, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 9.0 in stage 10.0 (TID 55)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 8.0 in stage 10.0 (TID 54) in 69 ms on localhost (executor driver) (9/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 43, boot = 2, init = 40, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 9.0 in stage 10.0 (TID 55). 1966 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 10.0 in stage 10.0 (TID 56, localhost, executor driver, partition 10, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 9.0 in stage 10.0 (TID 55) in 55 ms on localhost (executor driver) (10/20)
+20/04/16 15:18:15 INFO Executor: Running task 10.0 in stage 10.0 (TID 56)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 44, boot = 3, init = 40, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 10.0 in stage 10.0 (TID 56). 1853 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 11.0 in stage 10.0 (TID 57, localhost, executor driver, partition 11, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 11.0 in stage 10.0 (TID 57)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 10.0 in stage 10.0 (TID 56) in 65 ms on localhost (executor driver) (11/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 44, boot = 8, init = 36, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 11.0 in stage 10.0 (TID 57). 1850 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 12.0 in stage 10.0 (TID 58, localhost, executor driver, partition 12, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 12.0 in stage 10.0 (TID 58)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 11.0 in stage 10.0 (TID 57) in 60 ms on localhost (executor driver) (12/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 43, boot = 6, init = 36, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 12.0 in stage 10.0 (TID 58). 1853 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 13.0 in stage 10.0 (TID 59, localhost, executor driver, partition 13, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 13.0 in stage 10.0 (TID 59)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 12.0 in stage 10.0 (TID 58) in 62 ms on localhost (executor driver) (13/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 45, boot = 9, init = 35, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 13.0 in stage 10.0 (TID 59). 1854 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 14.0 in stage 10.0 (TID 60, localhost, executor driver, partition 14, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 14.0 in stage 10.0 (TID 60)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 13.0 in stage 10.0 (TID 59) in 61 ms on localhost (executor driver) (14/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 45, boot = 9, init = 35, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 14.0 in stage 10.0 (TID 60). 1860 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 15.0 in stage 10.0 (TID 61, localhost, executor driver, partition 15, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 15.0 in stage 10.0 (TID 61)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 14.0 in stage 10.0 (TID 60) in 61 ms on localhost (executor driver) (15/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 43, boot = 7, init = 35, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 15.0 in stage 10.0 (TID 61). 1852 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 16.0 in stage 10.0 (TID 62, localhost, executor driver, partition 16, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 16.0 in stage 10.0 (TID 62)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 15.0 in stage 10.0 (TID 61) in 60 ms on localhost (executor driver) (16/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 44, boot = 7, init = 36, finish = 1
+20/04/16 15:18:15 INFO Executor: Finished task 16.0 in stage 10.0 (TID 62). 1854 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 17.0 in stage 10.0 (TID 63, localhost, executor driver, partition 17, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 16.0 in stage 10.0 (TID 62) in 61 ms on localhost (executor driver) (17/20)
+20/04/16 15:18:15 INFO Executor: Running task 17.0 in stage 10.0 (TID 63)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 42, boot = 7, init = 35, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 17.0 in stage 10.0 (TID 63). 1855 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 18.0 in stage 10.0 (TID 64, localhost, executor driver, partition 18, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 18.0 in stage 10.0 (TID 64)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 17.0 in stage 10.0 (TID 63) in 59 ms on localhost (executor driver) (18/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 41, boot = 3, init = 38, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 18.0 in stage 10.0 (TID 64). 1861 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Starting task 19.0 in stage 10.0 (TID 65, localhost, executor driver, partition 19, NODE_LOCAL, 7662 bytes)
+20/04/16 15:18:15 INFO Executor: Running task 19.0 in stage 10.0 (TID 65)
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 18.0 in stage 10.0 (TID 64) in 48 ms on localhost (executor driver) (19/20)
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/04/16 15:18:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/04/16 15:18:15 INFO PythonRunner: Times: total = 42, boot = 7, init = 35, finish = 0
+20/04/16 15:18:15 INFO Executor: Finished task 19.0 in stage 10.0 (TID 65). 1895 bytes result sent to driver
+20/04/16 15:18:15 INFO TaskSetManager: Finished task 19.0 in stage 10.0 (TID 65) in 53 ms on localhost (executor driver) (20/20)
+20/04/16 15:18:15 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+20/04/16 15:18:15 INFO DAGScheduler: ResultStage 10 (collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15) finished in 1.216 s
+20/04/16 15:18:15 INFO DAGScheduler: Job 6 finished: collect at /usr/local/spark-2.4.5-bin-hadoop2.7/assgn/fp1.py:15, took 1.221137 s
+20/04/16 15:18:15 INFO SparkContext: Invoking stop() from shutdown hook
+20/04/16 15:18:15 INFO SparkUI: Stopped Spark web UI at http://localhost:4040
+20/04/16 15:18:15 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/16 15:18:15 INFO MemoryStore: MemoryStore cleared
+20/04/16 15:18:15 INFO BlockManager: BlockManager stopped
+20/04/16 15:18:15 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/04/16 15:18:15 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/04/16 15:18:15 INFO SparkContext: Successfully stopped SparkContext
+20/04/16 15:18:15 INFO ShutdownHookManager: Shutdown hook called
+20/04/16 15:18:15 INFO ShutdownHookManager: Deleting directory /tmp/spark-a8000978-e63d-4445-a147-2ec1f3712195
+20/04/16 15:18:15 INFO ShutdownHookManager: Deleting directory /tmp/spark-0812169f-b42b-47b9-acc3-290d1be6fc40/pyspark-e0a339e4-2a38-4a0b-9dfa-4cf693a3ca77
+20/04/16 15:18:15 INFO ShutdownHookManager: Deleting directory /tmp/spark-0812169f-b42b-47b9-acc3-290d1be6fc40

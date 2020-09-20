@@ -1,0 +1,1 @@
+bin/spark-submit assgn/fp1.py &> FP1.log

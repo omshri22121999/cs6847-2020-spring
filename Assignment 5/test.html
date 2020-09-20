@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JSON Test</title>
+  </head>
+  <body>
+    <div id="numberTweets"></div>
+    <b></b>
+    <b></b>
+    <div id="frequentPairs"></div>
+    <b></b>
+    <b></b>
+    <button onclick="setNewYork()">New York</button>
+    <button onclick="setCalifornia()">California</button>
+    <script>
+      function setNewYork() {
+        fetch("http://100.25.41.155:5000/count")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (data) {
+            var mainContainer = document.getElementById("numberTweets");
+            mainContainer.innerHTML = "Number of tweets in New York : " + data;
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+
+        fetch("http://100.25.41.155:5000/fp")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (data) {
+            var mainContainer = document.getElementById("frequentPairs");
+            mainContainer.innerHTML = "Frequent Pairs in New York : " + data;
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+      }
+      function setCalifornia() {
+        fetch("http://54.160.101.173:5000/count")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (data) {
+            var mainContainer = document.getElementById("numberTweets");
+            mainContainer.innerHTML =
+              "Number of tweets in California : " + data;
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+
+        fetch("http://54.160.101.173:5000/fp")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (data) {
+            var mainContainer = document.getElementById("frequentPairs");
+            mainContainer.innerHTML = "Frequent Pairs in California : " + data;
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+      }
+      setNewYork();
+    </script>
+  </body>
+</html>
+

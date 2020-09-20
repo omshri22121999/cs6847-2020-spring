@@ -1,0 +1,2 @@
+bin/spark-submit assgn/als.py &> ALSLogs.log
+
